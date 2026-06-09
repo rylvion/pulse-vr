@@ -13,14 +13,6 @@ function getQueryParams() {
 }
 
 /**
- * Gets the query parameters from the URL and returns the value of the "id" parameter
- * @return {Object|null} The game object if found, or null if not found.
- */
-function getQueryParams() {
-  return Object.fromEntries(new URLSearchParams(window.location.search));
-}
-
-/**
  * Finds a game in the provided list of games by its ID.
  * @param {Array} games The list of games to search through.
  * @param {string|number} id The ID of the game to find.
