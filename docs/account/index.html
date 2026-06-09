@@ -1,145 +1,156 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Manage your Pulse VR account, theme preferences, order history, and accessibility settings."
-    />
-    <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="https://rylvion.github.io/pulse-vr/account/" />
-    <title>Pulse VR | Account</title>
-    <script>
-      try {
-        document.documentElement.dataset.mode =
-          localStorage.getItem("pulse-theme-mode") || "neon";
-      } catch {
-        document.documentElement.dataset.mode = "neon";
-      }
-    </script>
-    <link rel="stylesheet" href="../../css/styles.css" />
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Manage your Pulse VR account settings, preferences, and booking history." />
+		<meta name="robots" content="index,follow" />
+		<meta name="theme-color" content="#0a0d14" />
 
-  <body class="g-theme">
-    <a class="skip-link" href="#account-page">Skip to content</a>
-    <header>
-      <nav id="navbar" aria-label="Primary">
-        <a class="brand" href="../" aria-label="Pulse VR home">
-          <img
-            class="brand-mark"
-            src="https://placehold.co/88x88/6f25f6/ffffff?text=PV"
-            width="44"
-            height="44"
-            alt="Pulse VR logo placeholder"
-            decoding="async"
-          />
-          <span class="brand-title">Pulse VR</span>
-        </a>
-        <ul>
-          <li class="navlink"><a href="../">Home</a></li>
-          <li class="navlink"><a href="../game-library/">Game Library</a></li>
-          <li class="navlink"><a href="../bookings/">Bookings</a></li>
-          <li class="navlink"><a href="../pricing/">Pricing</a></li>
-          <li class="navlink"><a href="../about/">About</a></li>
-          <li id="profile">
-            <a href="./" aria-label="Open account settings" aria-current="page">
-              <svg
-                class="icon"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Profile icon"
-              >
-                <path
-                  d="M10 10a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm3.758.673C15.124 9.574 16 7.89 16 6c0-3.314-2.686-6-6-6S4 2.686 4 6c0 1.89.876 3.574 2.242 4.673C2.583 12.048 0 15.445 0 20h20c0-4.555-2.583-7.952-6.242-9.327Z"
-                />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+		<title>Pulse VR | Account Settings</title>
 
-    <main id="account-page" tabindex="-1">
-      <section
-        class="account-panel"
-        id="profile-section"
-        aria-labelledby="profile-title"
-      >
-        <h1 id="profile-title">Account Settings</h1>
-        <p>
-          Manage your profile preferences, saved themes, and booking history
-          from one place.
-        </p>
-      </section>
+		<link rel="canonical" href="https://rylvion.github.io/pulse-vr/account/" />
 
-      <div class="account-grid">
-        <section class="account-panel" aria-labelledby="theme-title">
-          <h2 id="theme-title">Theme Preferences</h2>
-          <form id="theme-form" class="theme-options">
-            <label
-              ><input type="radio" name="theme-mode" value="neon" /> Neon
-              (Default)</label
-            >
-            <label
-              ><input type="radio" name="theme-mode" value="dark" /> Dark</label
-            >
-            <label
-              ><input type="radio" name="theme-mode" value="light" />
-              Light</label
-            >
-            <label
-              ><input type="radio" name="theme-mode" value="high-contrast" />
-              High Contrast</label
-            >
-          </form>
-          <p id="theme-status" aria-live="polite"></p>
-        </section>
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Pulse VR" />
+		<meta property="og:title"
+			content="Pulse VR | Account Settings" />
 
-        <section
-          class="account-panel"
-          id="order-history-section"
-          aria-labelledby="order-history-title"
-        >
-          <h2 id="order-history-title">Order History</h2>
-          <ol class="account-orders">
-            <li>Neon Strike - 2026-05-18 - 6:30 PM</li>
-            <li>Echo Rift - 2026-05-04 - 2:00 PM</li>
-            <li>Velocity X - 2026-04-21 - 8:15 PM</li>
-          </ol>
-        </section>
+		<!-- open graph -->
+		<meta property="og:description"
+			content="Manage your Pulse VR account settings, preferences, and booking history." />
+		<meta property="og:url"
+			content="https://rylvion.github.io/pulse-vr/account/" />
 
-        <section
-          class="account-panel"
-          id="accessibility-section"
-          aria-labelledby="accessibility-title"
-        >
-          <h2 id="accessibility-title">Accessibility</h2>
-          <p>
-            Need support during your visit? You can request caption support,
-            left-handed controls, and comfort mode at booking confirmation.
-          </p>
-        </section>
+		<!-- twitter-->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title"
+			content="Pulse VR | Account Settings" />
+		<meta name="twitter:description"
+			content="Manage your Pulse VR account settings, preferences, and booking history." />
 
-        <section
-          class="account-panel"
-          id="about-section"
-          aria-labelledby="about-title"
-        >
-          <h2 id="about-title">About</h2>
-          <p>
-            Learn more about our mission and venue details on the
-            <a href="../about/">About page</a>.
-          </p>
-        </section>
-      </div>
-    </main>
+		<link rel="icon" type="image/png" sizes="32x32"
+			href="/assets/favicons/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16"
+			href="/assets/favicons/favicon-16x16.png" />
+		<link rel="apple-touch-icon" sizes="180x180"
+			href="/assets/favicons/apple-touch-icon.png" />
+		<link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
+		<link rel="manifest" href="/assets/favicons/site.webmanifest" />
 
-    <footer>
-      <p>&copy; 2026 Pulse VR. All rights reserved.</p>
-    </footer>
-    <script type="module" src="../../js/account.js"></script>
-  </body>
+		<!-- CSS -->
+		<link rel="stylesheet" href="../../css/styles.css" />
+
+		<!-- JS -->
+		<script src="../../js/theme-init.js" defer></script>
+	</head>
+
+	<body class="g-theme">
+		<a class="skip-link" href="#account-page">Skip to content</a>
+		<header>
+			<nav id="navbar" aria-label="Primary">
+				<a class="brand" href="../../" aria-label="Pulse VR home">
+					<img
+						class="brand-mark"
+						src="https://placehold.co/88x88/6f25f6/ffffff?text=PV"
+						width="44"
+						height="44"
+						alt="Pulse VR logo placeholder"
+						decoding="async" />
+					<span class="brand-title">Pulse VR</span>
+				</a>
+				<ul>
+					<li class="navlink"><a href="../../">Home</a></li>
+					<li class="navlink"><a href="../../game-library/">Game Library</a></li>
+					<li class="navlink"><a href="../../bookings/">Bookings</a></li>
+					<li class="navlink"><a href="../../pricing/">Pricing</a></li>
+					<li class="navlink"><a href="../../about/">About</a></li>
+					<li id="profile">
+						<a href="./" aria-label="Open account settings" aria-current="page">
+							<svg
+								class="icon"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg"
+								role="img"
+								aria-label="Profile icon">
+								<path
+									d="M10 10a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm3.758.673C15.124 9.574 16 7.89 16 6c0-3.314-2.686-6-6-6S4 2.686 4 6c0 1.89.876 3.574 2.242 4.673C2.583 12.048 0 15.445 0 20h20c0-4.555-2.583-7.952-6.242-9.327Z" />
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="account-page" tabindex="-1">
+			<section
+				class="account-panel"
+				id="profile-section"
+				aria-labelledby="profile-title">
+				<h1 id="profile-title">Account Settings</h1>
+				<p>
+					Manage your profile preferences, saved themes, and booking history
+					from one place.
+				</p>
+			</section>
+
+			<div class="account-grid">
+				<section class="account-panel" aria-labelledby="theme-title">
+					<h2 id="theme-title">Theme Preferences</h2>
+					<form id="theme-form" class="theme-options">
+						<label><input type="radio" name="theme-mode" value="neon" /> Neon
+							(Default)</label>
+						<label><input type="radio" name="theme-mode" value="dark" /> Dark</label>
+						<label><input type="radio" name="theme-mode" value="light" />
+							Light</label>
+						<label><input type="radio" name="theme-mode" value="high-contrast" />
+							High Contrast</label>
+					</form>
+					<p id="theme-status" aria-live="polite"></p>
+				</section>
+
+				<section
+					class="account-panel"
+					id="order-history-section"
+					aria-labelledby="order-history-title">
+					<h2 id="order-history-title">Order History</h2>
+					<ol class="account-orders">
+						<li>Neon Strike - 2026-05-18 - 6:30 PM</li>
+						<li>Echo Rift - 2026-05-04 - 2:00 PM</li>
+						<li>Velocity X - 2026-04-21 - 8:15 PM</li>
+					</ol>
+				</section>
+
+				<section
+					class="account-panel"
+					id="accessibility-section"
+					aria-labelledby="accessibility-title">
+					<h2 id="accessibility-title">Accessibility</h2>
+					<p>
+						Need support during your visit? You can request caption support,
+						left-handed controls, and comfort mode at booking confirmation.
+					</p>
+				</section>
+
+				<section
+					class="account-panel"
+					id="about-section"
+					aria-labelledby="about-title">
+					<h2 id="about-title">About</h2>
+					<p>
+						Learn more about our mission and venue details on the
+						<a href="../about/">About page</a>.
+					</p>
+				</section>
+			</div>
+		</main>
+
+		<footer>
+			<p>&copy; 2026 Pulse VR. All rights reserved.</p>
+		</footer>
+		<script type="module" src="../../js/account.js"></script>
+	</body>
 </html>

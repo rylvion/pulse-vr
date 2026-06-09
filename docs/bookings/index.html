@@ -1,136 +1,163 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Book your next Pulse VR session by selecting game, date, group size, and confirmation details."
-    />
-    <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="https://rylvion.github.io/pulse-vr/bookings/" />
-    <title>Pulse VR | Bookings</title>
-    <script>
-      try {
-        document.documentElement.dataset.mode =
-          localStorage.getItem("pulse-theme-mode") || "neon";
-      } catch {
-        document.documentElement.dataset.mode = "neon";
-      }
-    </script>
-    <link rel="stylesheet" href="../../css/styles.css" />
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Book your virtual reality gaming sessions at Pulse VR and experience the future of immersive entertainment." />
+		<meta name="robots" content="index,follow" />
+		<meta name="theme-color" content="#0a0d14" />
 
-  <body class="theme-booking" data-booking-step="select">
-    <a class="skip-link" href="#bookings-page">Skip to content</a>
-    <header>
-      <nav id="navbar" aria-label="Primary">
-        <a class="brand" href="../" aria-label="Pulse VR home">
-          <img
-            class="brand-mark"
-            src="https://placehold.co/88x88/6f25f6/ffffff?text=PV"
-            width="44"
-            height="44"
-            alt="Pulse VR logo placeholder"
-            decoding="async"
-          />
-          <span class="brand-title">Pulse VR</span>
-        </a>
-        <ul>
-          <li class="navlink"><a href="../">Home</a></li>
-          <li class="navlink"><a href="../game-library/">Game Library</a></li>
-          <li class="navlink"><a href="./" aria-current="page">Bookings</a></li>
-          <li class="navlink"><a href="../pricing/">Pricing</a></li>
-          <li class="navlink"><a href="../about/">About</a></li>
-          <li id="profile">
-            <a href="../account/" aria-label="Open account settings">
-              <svg
-                class="icon"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Profile icon"
-              >
-                <path
-                  d="M10 10a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm3.758.673C15.124 9.574 16 7.89 16 6c0-3.314-2.686-6-6-6S4 2.686 4 6c0 1.89.876 3.574 2.242 4.673C2.583 12.048 0 15.445 0 20h20c0-4.555-2.583-7.952-6.242-9.327Z"
-                />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+		<title>Pulse VR | Bookings</title>
 
-    <main id="bookings-page" class="page-main" tabindex="-1">
-      <ol id="booking-steps" aria-label="Booking process steps">
-        <li data-step="select" aria-current="step">
-          <span>1</span> Select Game
-        </li>
-        <li data-step="date"><span>2</span> Date &amp; Time</li>
-        <li data-step="group"><span>3</span> Group Size</li>
-        <li data-step="confirm"><span>4</span> Confirm</li>
-      </ol>
+		<link rel="canonical" href="https://rylvion.github.io/pulse-vr/bookings/" />
 
-      <div id="booking-layout">
-        <section id="game-selection" aria-labelledby="game-selection-title">
-          <h2 id="game-selection-title">Select Game</h2>
-          <hr />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Pulse VR" />
+		<meta property="og:title"
+			content="Pulse VR | Bookings" />
 
-          <form id="booking-game-form">
-            <label class="selectable-game">
-              <input type="radio" name="selectedGame" value="1" />
-              <span>Game Title</span>
-              <small>Genre</small>
-            </label>
+		<!-- open graph -->
+		<meta property="og:description"
+			content="Book your virtual reality gaming sessions at Pulse VR and experience the future of immersive entertainment." />
+		<meta property="og:url"
+			content="https://rylvion.github.io/pulse-vr/bookings/" />
 
-            <label class="selectable-game">
-              <input type="radio" name="selectedGame" value="2" checked />
-              <span>Game Title</span>
-              <small>Genre</small>
-            </label>
+		<!-- twitter-->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title"
+			content="Pulse VR | Bookings" />
+		<meta name="twitter:description"
+			content="Book your virtual reality gaming sessions at Pulse VR and experience the future of immersive entertainment." />
 
-            <label class="selectable-game">
-              <input type="radio" name="selectedGame" value="3" />
-              <span>Game Title</span>
-              <small>Genre</small>
-            </label>
+		<link rel="icon" type="image/png" sizes="32x32"
+			href="/assets/favicons/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16"
+			href="/assets/favicons/favicon-16x16.png" />
+		<link rel="apple-touch-icon" sizes="180x180"
+			href="/assets/favicons/apple-touch-icon.png" />
+		<link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
+		<link rel="manifest" href="/assets/favicons/site.webmanifest" />
 
-            <label class="selectable-game">
-              <input type="radio" name="selectedGame" value="4" />
-              <span>Game Title</span>
-              <small>Genre</small>
-            </label>
-          </form>
-        </section>
+		<!-- CSS -->
+		<link rel="stylesheet" href="../css/styles.css" />
 
-        <aside id="selected-game-preview" aria-labelledby="selected-game-title">
-          <img
-            src="https://placehold.co/420x300/d1495b/ffffff?text=Selected+Game"
-            width="420"
-            height="300"
-            alt="Selected game preview"
-            decoding="async"
-            fetchpriority="high"
-          />
-          <h3 id="selected-game-title">Game Title</h3>
-          <p>
-            Short description of the game and what players can expect in this
-            session.
-          </p>
-          <ul>
-            <li>Players: 2-4</li>
-            <li>Duration: 45 mins</li>
-            <li>Difficulty: Medium</li>
-          </ul>
-          <p><button id="next-step-btn" type="button">Next: Date &amp; Time</button></p>
-        </aside>
-      </div>
-    </main>
+		<!-- JS -->
+		<script src="../js/theme-init.js" defer></script>
 
-    <footer>
-      <p>&copy; 2026 Pulse VR. All rights reserved.</p>
-    </footer>
-    <script type="module" src="../../js/bookings.js"></script>
-  </body>
+	</head>
+
+	<body class="theme-booking" data-booking-step="select">
+		<a class="skip-link" href="#bookings-page">Skip to content</a>
+		<header>
+			<nav id="navbar" aria-label="Primary">
+				<a class="brand" href="../" aria-label="Pulse VR home">
+					<img
+						class="brand-mark"
+						src="https://placehold.co/88x88/6f25f6/ffffff?text=PV"
+						width="44"
+						height="44"
+						alt="Pulse VR logo placeholder"
+						decoding="async" />
+					<span class="brand-title">Pulse VR</span>
+				</a>
+				<ul>
+					<li class="navlink"><a href="../">Home</a></li>
+					<li class="navlink"><a href="../game-library/">Game Library</a></li>
+					<li class="navlink"><a href="./" aria-current="page">Bookings</a></li>
+					<li class="navlink"><a href="../pricing/">Pricing</a></li>
+					<li class="navlink"><a href="../about/">About</a></li>
+					<li id="profile">
+						<a href="../account/" aria-label="Open account settings">
+							<svg
+								class="icon"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg"
+								role="img"
+								aria-label="Profile icon">
+								<path
+									d="M10 10a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm3.758.673C15.124 9.574 16 7.89 16 6c0-3.314-2.686-6-6-6S4 2.686 4 6c0 1.89.876 3.574 2.242 4.673C2.583 12.048 0 15.445 0 20h20c0-4.555-2.583-7.952-6.242-9.327Z" />
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="bookings-page" class="page-main" tabindex="-1">
+			<ol id="booking-steps" aria-label="Booking process steps">
+				<li data-step="select" aria-current="step">
+					<span>1</span> Select Game
+				</li>
+				<li data-step="date"><span>2</span> Date &amp; Time</li>
+				<li data-step="group"><span>3</span> Group Size</li>
+				<li data-step="confirm"><span>4</span> Confirm</li>
+			</ol>
+
+			<div id="booking-layout">
+				<section id="game-selection" aria-labelledby="game-selection-title">
+					<h2 id="game-selection-title">Select Game</h2>
+					<hr />
+
+					<form id="booking-game-form">
+						<label class="selectable-game">
+							<input type="radio" name="selectedGame" value="1" />
+							<span>Game Title</span>
+							<small>Genre</small>
+						</label>
+
+						<label class="selectable-game">
+							<input type="radio" name="selectedGame" value="2" checked />
+							<span>Game Title</span>
+							<small>Genre</small>
+						</label>
+
+						<label class="selectable-game">
+							<input type="radio" name="selectedGame" value="3" />
+							<span>Game Title</span>
+							<small>Genre</small>
+						</label>
+
+						<label class="selectable-game">
+							<input type="radio" name="selectedGame" value="4" />
+							<span>Game Title</span>
+							<small>Genre</small>
+						</label>
+					</form>
+				</section>
+
+				<aside id="selected-game-preview" aria-labelledby="selected-game-title">
+					<img
+						src="https://placehold.co/420x300/d1495b/ffffff?text=Selected+Game"
+						width="420"
+						height="300"
+						alt="Selected game preview"
+						decoding="async"
+						fetchpriority="high" />
+					<h3 id="selected-game-title">Game Title</h3>
+					<p>
+						Short description of the game and what players can expect in this
+						session.
+					</p>
+					<ul>
+						<li>Players: 2-4</li>
+						<li>Duration: 45 mins</li>
+						<li>Difficulty: Medium</li>
+					</ul>
+					<p>
+						<button id="next-step-btn" type="button">
+							Next: Date &amp; Time
+						</button>
+					</p>
+				</aside>
+			</div>
+		</main>
+
+		<footer>
+			<p>&copy; 2026 Pulse VR. All rights reserved.</p>
+		</footer>
+		<script type="module" src="../../js/bookings.js"></script>
+	</body>
 </html>
