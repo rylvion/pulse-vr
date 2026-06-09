@@ -1,9 +1,9 @@
 import { assetIdFromGameLike, normalizeGameId } from "./asset-utils.js";
 import { attachImagePath } from "./image-loader.js";
 
-const GAMES_DB_URL = new URL("/assets/data/games.json", import.meta.url);
+const GAMES_DB_URL = new URL("pulse-vr/assets/data/games.json", import.meta.url);
 const GAMES_DB_FALLBACK_URL = new URL(
-  "/assets/data/games.json",
+  "pulse-vr/assets/data/games.json",
   import.meta.url,
 );
 

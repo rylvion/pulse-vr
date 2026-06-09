@@ -55,6 +55,71 @@ function getFiles(dir, predicate) {
   return results;
 }
 
+function generateSiteMap() {
+  const htmlFiles = getFiles(distDir, (name) => name.endsWith(".html"));
+
+  const today = new Date().toISOString().split("T")[0];
+
+  const excluded = new Set([
+    "game.html",
+  ]);
+
+  const seoConfig = {
+    "": { priority: "1.0", changefreq: "weekly" },
+    "about/": { priority: "0.7", changefreq: "monthly" },
+    "account/": { priority: "0.6", changefreq: "monthly" },
+    "pricing/": { priority: "0.8", changefreq: "monthly" },
+    "game-library/": { priority: "0.8", changefreq: "weekly" },
+    "bookings/": { priority: "0.9", changefreq: "weekly" },
+    "bookings/date-time/": { priority: "0.9", changefreq: "weekly" },
+    "bookings/group-size/": { priority: "0.9", changefreq: "weekly" },
+    "bookings/confirm/": { priority: "0.9", changefreq: "weekly" },
+    "bookings/summary/": { priority: "0.9", changefreq: "weekly" },
+    "bookings/success/": { priority: "0.4", changefreq: "yearly" },
+  };
+
+  const urls = htmlFiles
+    .map((file) => {
+      let relativePath = path.relative(distDir, file).replace(/\\/g, "/");
+
+      if (excluded.has(relativePath)) return null;
+
+      if (relativePath === "index.html") {
+        relativePath = "";
+      } else if (relativePath.endsWith("/index.html")) {
+        relativePath = relativePath.replace(/index\.html$/, "");
+      }
+
+      const config = seoConfig[relativePath] || {
+        priority: "0.5",
+        changefreq: "monthly",
+      };
+
+      return {
+        loc: `${siteUrl}/${relativePath}`,
+        lastmod: today,
+        changefreq: config.changefreq,
+        priority: config.priority,
+      };
+    })
+    .filter(Boolean);
+
+  const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    ${urls
+      .map((u) =>
+        `  <url>
+              <loc>${u.loc}</loc>
+              <lastmod>${u.lastmod}</lastmod>
+              <changefreq>${u.changefreq}</changefreq>
+              <priority>${u.priority}</priority>
+           </url>`,
+      ).join("\n")}
+    </urlset>`;
+
+  fs.writeFileSync(path.join(distDir, "sitemap.xml"), sitemapContent, "utf8");
+}
+
 function htmlOptions() {
   return {
     collapseWhitespace: true,
@@ -132,9 +197,9 @@ async function build() {
       relativeHtmlPath === "index.html"
         ? 0
         : path
-            .dirname(relativeHtmlPath)
-            .split(path.sep)
-            .filter((segment) => segment && segment !== ".").length;
+          .dirname(relativeHtmlPath)
+          .split(path.sep)
+          .filter((segment) => segment && segment !== ".").length;
     let rewrittenHtml = rewriteAssetPaths(htmlSource, depth, "css");
     rewrittenHtml = rewriteAssetPaths(rewrittenHtml, depth, "js");
     const htmlOutput = await minifyHtml(rewrittenHtml, {
@@ -148,6 +213,7 @@ async function build() {
   console.log(
     `Built ${htmlFiles.length} HTML files, ${jsFiles.length} JS files and 1 CSS file into dist/`,
   );
+  generateSiteMap();
 }
 
 build().catch((error) => {

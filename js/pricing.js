@@ -12,9 +12,6 @@ function ensureModalExists() {
 
 function initPricingPage() {
   ensureModalExists();
-
-  console.log("Pricing page loaded ✔");
-
   setupPriceCardEffects();
 }
 

@@ -53,3 +53,5 @@ The project includes scripts for managing game data and optimising images. To us
  - `node fetcher.mjs` to fetch and update game data and images from the APIs. The output will be saved in `../assets/data/assets.json` in the same directory.
  - `excel-converter.py` to convert `assets.json` for visualisation of asset in human-readable format in excel. The output file will be saved as `../assets/data/assets.xlsx` in the same directory.
  - `optimise-images.mjs` to optimise the images in `../assets/images/` for web use. The output will go into a new folder in the same directory called `../assets/images/optimised/`. You can then replace the original images with the optimised ones in your project.
+
+ To access Pulse VR gaming center website online visit: [https://rylvion.github.io/pulse-vr/](https://rylvion.github.io/pulse-vr/)
