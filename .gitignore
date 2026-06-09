@@ -1,0 +1,30 @@
+# ignore m365 (microsoft) files
+*.docx
+*.pptx
+*.pdf
+
+# ignore backup and external folders
+backup/
+private/
+
+# ignore system files
+Thumbs.db
+.DS_Store
+
+# ignore IDE & editor folders
+.idea/
+.venv/
+
+# ignore node modules
+scripts/node_modules/
+
+# other
+*.backup
+*.tmp
+*.log
+*.swp
+*.swo
+*.env
+*.cache
+*.bak
+*~

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Browse Pulse VR game library, filter by genre and difficulty, and pick your next VR adventure.">
+		<meta name="robots" content="index,follow">
+		<link rel="canonical" href="https://rylvion.github.io/pulse-vr/game-library/">
+		<title>Pulse VR | Game Library</title>
+		<script>
+			try {
+				document.documentElement.dataset.mode = localStorage.getItem("pulse-theme-mode") || "neon";
+			} catch {
+				document.documentElement.dataset.mode = "neon";
+			}
+		</script>
+		<link rel="stylesheet" href="../../css/styles.css">
+	</head>
+
+	<body class="g-theme">
+		<a class="skip-link" href="#game-library-page">Skip to content</a>
+		<header>
+			<nav id="navbar" aria-label="Primary">
+					<a class="brand" href="../" aria-label="Pulse VR home">
+						<img class="brand-mark" src="https://placehold.co/88x88/6f25f6/ffffff?text=PV" width="44" height="44" alt="Pulse VR logo placeholder" decoding="async">
+						<span class="brand-title">Pulse VR</span>
+					</a>
+				<ul>
+					<li class="navlink"><a href="../">Home</a></li>
+					<li class="navlink"><a href="./" aria-current="page">Game Library</a></li>
+					<li class="navlink"><a href="../bookings/">Bookings</a></li>
+					<li class="navlink"><a href="../pricing/">Pricing</a></li>
+					<li class="navlink"><a href="../about/">About</a></li>
+					<li id="profile">
+						<a href="../account/" aria-label="Open account settings">
+							<svg class="icon" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Profile icon">
+								<path d="M10 10a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm3.758.673C15.124 9.574 16 7.89 16 6c0-3.314-2.686-6-6-6S4 2.686 4 6c0 1.89.876 3.574 2.242 4.673C2.583 12.048 0 15.445 0 20h20c0-4.555-2.583-7.952-6.242-9.327Z"/>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="game-library-page" class="page-main" tabindex="-1">
+			<aside id="library-filters" aria-label="Game filters">
+				<h2>Filters</h2>
+				<section>
+					<h3>Genre</h3>
+					<label><input type="checkbox" name="genre" value="action"> Action</label>
+					<label><input type="checkbox" name="genre" value="adventure"> Adventure</label>
+					<label><input type="checkbox" name="genre" value="racing"> Racing</label>
+					<label><input type="checkbox" name="genre" value="puzzle"> Puzzle</label>
+					<label><input type="checkbox" name="genre" value="sports"> Sports</label>
+				</section>
+				<section>
+					<h3>Difficulty</h3>
+					<label><input type="checkbox" name="difficulty" value="easy"> Easy</label>
+					<label><input type="checkbox" name="difficulty" value="medium"> Medium</label>
+					<label><input type="checkbox" name="difficulty" value="hard"> Hard</label>
+				</section>
+				<button type="button">Reset Filters</button>
+			</aside>
+
+			<section id="library-content" aria-labelledby="library-title">
+				<h2 id="library-title" class="visually-hidden">Game Library</h2>
+				<div id="library-controls">
+					<label for="library-search" class="visually-hidden">Search games</label>
+					<input id="library-search" type="search" placeholder="Search Games..." autocomplete="off">
+					<label for="library-sort">Sort By</label>
+					<select id="library-sort" name="sort">
+						<option value="popular" selected="selected">Popular</option>
+						<option value="rating">Rating</option>
+						<option value="duration">Duration</option>
+					</select>
+				</div>
+
+				<div id="library-grid">
+					<article class="game-card" data-game-id("${game.id}")><img src="https://placehold.co/280x180/0f8a7b/ffffff?text=Game" width="280" height="180" alt="Game placeholder" loading="lazy" decoding="async"><h3>Game Title</h3><p>Genre</p><p>★★★★★</p></article>
+					<article class="game-card" data-game-id("${game.id}")><img src="https://placehold.co/280x180/0f8a7b/ffffff?text=Game" width="280" height="180" alt="Game placeholder" loading="lazy" decoding="async"><h3>Game Title</h3><p>Genre</p><p>★★★★★</p></article>
+					<article class="game-card" data-game-id("${game.id}")><img src="https://placehold.co/280x180/0f8a7b/ffffff?text=Game" width="280" height="180" alt="Game placeholder" loading="lazy" decoding="async"><h3>Game Title</h3><p>Genre</p><p>★★★★★</p></article>
+					<article class="game-card" data-game-id("${game.id}")><img src="https://placehold.co/280x180/0f8a7b/ffffff?text=Game" width="280" height="180" alt="Game placeholder" loading="lazy" decoding="async"><h3>Game Title</h3><p>Genre</p><p>★★★★★</p></article>
+					<article class="game-card" data-game-id("${game.id}")><img src="https://placehold.co/280x180/0f8a7b/ffffff?text=Game" width="280" height="180" alt="Game placeholder" loading="lazy" decoding="async"><h3>Game Title</h3><p>Genre</p><p>★★★★★</p></article>
+					<article class="game-card" data-game-id("${game.id}")><img src="https://placehold.co/280x180/0f8a7b/ffffff?text=Game" width="280" height="180" alt="Game placeholder" loading="lazy" decoding="async"><h3>Game Title</h3><p>Genre</p><p>★★★★★</p></article>
+					<article class="game-card" data-game-id("${game.id}")><img src="https://placehold.co/280x180/0f8a7b/ffffff?text=Game" width="280" height="180" alt="Game placeholder" loading="lazy" decoding="async"><h3>Game Title</h3><p>Genre</p><p>★★★★★</p></article>
+				</div>
+
+				<nav id="library-pagination" aria-label="Library pages">
+					<button type="button" aria-label="Previous page">&lt;</button>
+					<a href="#" aria-current="page">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<button type="button" aria-label="Next page">&gt;</button>
+				</nav>
+
+				<div id="game-preview-modal" class="modal" tabindex="-1"></div>
+			</section>
+		</main>
+
+		<footer>
+			<p>&copy; 2026 Pulse VR. All rights reserved.</p>
+		</footer>
+	<script type="module" src="../../js/game-library.js"></script>
+	</body>
+</html>

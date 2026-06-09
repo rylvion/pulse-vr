@@ -1,0 +1,22 @@
+{
+  "name": "pulse-vr-scripts",
+  "version": "1.0.0",
+  "description": "Build tooling and data scripts for Pulse VR",
+  "main": "fetcher.js",
+  "scripts": {
+    "build:deploy-assets": "node ./build-site.mjs",
+    "test": "echo \"No tests configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "html-minifier-terser": "^7.2.0",
+    "terser": "^5.31.3"
+  },
+  "dependencies": {
+    "sharp": "^0.34.5"
+  }
+}

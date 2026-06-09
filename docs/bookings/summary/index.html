@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pulse VR booking order summary." />
+    <meta name="robots" content="index,follow" />
+    <link
+      rel="canonical"
+      href="https://rylvion.github.io/pulse-vr/bookings/summary/"
+    />
+    <title>Pulse VR | Booking Summary</title>
+    <script>
+      try {
+        document.documentElement.dataset.mode =
+          localStorage.getItem("pulse-theme-mode") || "neon";
+      } catch {
+        document.documentElement.dataset.mode = "neon";
+      }
+    </script>
+    <link rel="stylesheet" href="../../../css/styles.css" />
+  </head>
+  <body class="g-theme" data-booking-step="summary">
+    <a class="skip-link" href="#bookings-page">Skip to content</a>
+    <header>
+      <nav id="navbar" aria-label="Primary">
+        <a class="brand" href="../../" aria-label="Pulse VR home">
+          <img
+            class="brand-mark"
+            src="https://placehold.co/88x88/6f25f6/ffffff?text=PV"
+            width="44"
+            height="44"
+            alt="Pulse VR logo placeholder"
+            decoding="async"
+          />
+          <span class="brand-title">Pulse VR</span>
+        </a>
+        <ul>
+          <li class="navlink"><a href="../../">Home</a></li>
+          <li class="navlink">
+            <a href="../../game-library/">Game Library</a>
+          </li>
+          <li class="navlink">
+            <a href="../" aria-current="page">Bookings</a>
+          </li>
+          <li class="navlink"><a href="../../pricing/">Pricing</a></li>
+          <li class="navlink"><a href="../../about/">About</a></li>
+          <li id="profile">
+            <a href="../../account/" aria-label="Open account settings"
+              ><svg
+                class="icon"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 10a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm3.758.673C15.124 9.574 16 7.89 16 6c0-3.314-2.686-6-6-6S4 2.686 4 6c0 1.89.876 3.574 2.242 4.673C2.583 12.048 0 15.445 0 20h20c0-4.555-2.583-7.952-6.242-9.327Z"
+                /></svg
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="bookings-page" class="booking-step-page" tabindex="-1">
+      <section class="booking-summary-card" aria-labelledby="summary-title">
+        <h1 id="summary-title">Order Summary</h1>
+        <dl>
+          <dt>Game ID</dt>
+          <dd id="summary-game">1</dd>
+          <dt>Date</dt>
+          <dd id="summary-date">Not selected</dd>
+          <dt>Time</dt>
+          <dd id="summary-time">Not selected</dd>
+          <dt>Group Size</dt>
+          <dd id="summary-size">Not selected</dd>
+        </dl>
+        <p class="step-actions">
+          <a class="action-primary" href="../">New Booking</a>
+          <a
+            class="action-secondary"
+            href="../../account/#order-history-section"
+            >View in Account</a
+          >
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Pulse VR. All rights reserved.</p>
+    </footer>
+    <script type="module" src="../../../js/booking-flow.js"></script>
+  </body>
+</html>

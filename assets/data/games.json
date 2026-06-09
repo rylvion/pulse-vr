@@ -1,0 +1,1081 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "title": "Neon Strike",
+      "shortDesc": "A cyberpunk combat arena with tactical firefights and team objectives.",
+      "longDesc": "Enter a neon city where rival crews battle for control of district hubs. Use plasma weapons, deployable gadgets, and coordinated pushes to win fast-paced VR matches. The arena is built for competitive sessions with clear team roles and intense replay value.",
+      "image": {
+        "JPG": "A001-neon-strike.jpg",
+        "AVIF": "A001-neon-strike.avif",
+        "WEBP": "A001-neon-strike.webp"
+      },
+      "modes": ["Co-op", "Multiplayer"],
+      "minPlayers": 2,
+      "maxPlayers": 8,
+      "ageRating": "PEGI 12",
+      "difficulty": "Medium",
+      "roomType": "Competitive",
+      "duration": 30,
+      "genre": ["Shooter", "Tactical", "Sci-Fi"],
+      "rating": 4.5,
+      "ratingCount": 248,
+      "assetId": "A001",
+      "contentDescriptors": {
+        "violence": "Moderate",
+        "fear": "Mild",
+        "language": "None",
+        "onlineInteraction": "Moderate"
+      },
+      "targetAudience": {
+        "minAge": 12,
+        "maxAge": 30
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Intense",
+      "intensity": "High",
+      "motionType": "Room-scale",
+      "matchType": "Ranked",
+      "roundsPerGame": 3,
+      "winCondition": "Objective Based",
+      "accessibilityNotes": "Color-blind friendly team colors, subtitles, and left-handed controls are supported; seated play is not recommended because the game uses room-scale dodging and fast team movement."
+    },
+    {
+      "id": 2,
+      "title": "Echo Rift",
+      "shortDesc": "A reality-bending escape adventure full of shifting puzzle rooms.",
+      "longDesc": "Explore a fractured labyrinth where each chamber changes shape as you solve it. Decode ancient systems, uncover hidden passages, and work through clever environmental puzzles at your own pace. This experience suits solo play or small groups looking for a thoughtful challenge.",
+      "image": {
+        "JPG": "A002-echo-rift.jpg",
+        "AVIF": "A002-echo-rift.avif",
+        "WEBP": "A002-echo-rift.webp"
+      },
+      "modes": ["Single Player", "Co-op"],
+      "minPlayers": 1,
+      "maxPlayers": 4,
+      "ageRating": "PEGI 7",
+      "difficulty": "Easy",
+      "roomType": "Family",
+      "duration": 30,
+      "genre": ["Puzzle", "Escape Room", "Mystery"],
+      "rating": 4,
+      "ratingCount": 184,
+      "assetId": "A002",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "Mild",
+        "language": "None",
+        "onlineInteraction": "Mild"
+      },
+      "targetAudience": {
+        "minAge": 7,
+        "maxAge": 16
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Comfortable",
+      "intensity": "Low",
+      "motionType": "Room-scale",
+      "matchType": "Quick Match",
+      "roundsPerGame": 1,
+      "winCondition": "Exploration Based",
+      "accessibilityNotes": "Color-blind puzzle symbols, subtitles, left-handed controls, and seated play are supported; some room-scale reaching may still be easier while standing."
+    },
+    {
+      "id": 3,
+      "title": "Velocity X",
+      "shortDesc": "A futuristic racing showdown with tight tracks and drifting competition.",
+      "longDesc": "Take the wheel of high-speed hover racers and blast through glowing city circuits. Master sharp turns, boost timing, and lane control to beat rival crews in head-to-head races. The game is tuned for short, repeatable multiplayer sessions.",
+      "image": {
+        "JPG": "A003-velocity-x.jpg",
+        "AVIF": "A003-velocity-x.avif",
+        "WEBP": "A003-velocity-x.webp"
+      },
+      "modes": ["Multiplayer"],
+      "minPlayers": 2,
+      "maxPlayers": 6,
+      "ageRating": "PEGI 3",
+      "difficulty": "Hard",
+      "roomType": "Competitive",
+      "duration": 15,
+      "genre": ["Racing", "Sci-Fi", "Simulation"],
+      "rating": 4.5,
+      "ratingCount": 212,
+      "assetId": "A003",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "None",
+        "language": "None",
+        "onlineInteraction": "Moderate"
+      },
+      "targetAudience": {
+        "minAge": 10,
+        "maxAge": 25
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Intense",
+      "intensity": "High",
+      "motionType": "Seated",
+      "matchType": "Party",
+      "roundsPerGame": 3,
+      "winCondition": "Highest Score",
+      "accessibilityNotes": "Seated play, subtitles, left-handed controls, and high-contrast racing UI are supported; comfort may still be difficult for players sensitive to speed or drifting motion."
+    },
+    {
+      "id": 4,
+      "title": "Midnight Manor",
+      "shortDesc": "A tense haunted-house escape with jump scares and hidden clues.",
+      "longDesc": "Investigate a derelict manor where every room hides a piece of the story. Search for keys, solve lockbox puzzles, and survive the presence stalking the halls. The experience is designed to deliver strong atmosphere in a compact horror session.",
+      "image": {
+        "JPG": "A004-midnight-manor.jpg",
+        "AVIF": "A004-midnight-manor.avif",
+        "WEBP": "A004-midnight-manor.webp"
+      },
+      "modes": ["Single Player", "Co-op"],
+      "minPlayers": 1,
+      "maxPlayers": 4,
+      "ageRating": "PEGI 16",
+      "difficulty": "Medium",
+      "roomType": "Horror",
+      "duration": 45,
+      "genre": ["Horror", "Escape Room", "Puzzle"],
+      "rating": 4.5,
+      "ratingCount": 326,
+      "assetId": "A004",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "Strong",
+        "language": "None",
+        "onlineInteraction": "Mild"
+      },
+      "targetAudience": {
+        "minAge": 16,
+        "maxAge": 35
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Moderate",
+      "intensity": "High",
+      "motionType": "Room-scale",
+      "matchType": "Quick Match",
+      "roundsPerGame": 1,
+      "winCondition": "Exploration Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, and high-contrast clue highlighting are supported; seated play is partially supported, but room-scale searching is recommended for the full haunted-house experience."
+    },
+    {
+      "id": 5,
+      "title": "Skyforge Legends",
+      "shortDesc": "A fantasy quest where teams defend floating islands from ancient threats.",
+      "longDesc": "Step into a magical realm of sky islands, arcane towers, and mythic guardians. Cast spells, repair defences, and complete objective-based encounters with your team. It blends action and exploration for a broad audience.",
+      "image": {
+        "JPG": "A005-skyforge-legends.jpg",
+        "AVIF": "A005-skyforge-legends.avif",
+        "WEBP": "A005-skyforge-legends.webp"
+      },
+      "modes": ["Co-op", "Multiplayer"],
+      "minPlayers": 2,
+      "maxPlayers": 6,
+      "ageRating": "PEGI 7",
+      "difficulty": "Medium",
+      "roomType": "Adventure",
+      "duration": 45,
+      "genre": ["Fantasy", "Adventure", "Action"],
+      "rating": 4,
+      "ratingCount": 198,
+      "assetId": "A005",
+      "contentDescriptors": {
+        "violence": "Mild",
+        "fear": "Mild",
+        "language": "None",
+        "onlineInteraction": "Moderate"
+      },
+      "targetAudience": {
+        "minAge": 8,
+        "maxAge": 24
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Moderate",
+      "intensity": "Medium",
+      "motionType": "Room-scale",
+      "matchType": "Quick Match",
+      "roundsPerGame": 1,
+      "winCondition": "Objective Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, and color-blind friendly spell effects are supported; seated play is limited because players need to defend areas and interact with room-scale objectives."
+    },
+    {
+      "id": 6,
+      "title": "Orbital Rescue",
+      "shortDesc": "A sci-fi co-op mission to repair a failing station before time runs out.",
+      "longDesc": "Work together aboard a damaged orbital station to restore power, reroute systems, and prevent total shutdown. Each player can handle a different task, making communication essential. It fits quick team sessions and promotes shared problem-solving.",
+      "image": {
+        "JPG": "A006-orbital-rescue.jpg",
+        "AVIF": "A006-orbital-rescue.avif",
+        "WEBP": "A006-orbital-rescue.webp"
+      },
+      "modes": ["Co-op"],
+      "minPlayers": 2,
+      "maxPlayers": 5,
+      "ageRating": "PEGI 7",
+      "difficulty": "Medium",
+      "roomType": "Adventure",
+      "duration": 30,
+      "genre": ["Sci-Fi", "Co-op", "Simulation"],
+      "rating": 4,
+      "ratingCount": 143,
+      "assetId": "A006",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "Mild",
+        "language": "None",
+        "onlineInteraction": "Mild"
+      },
+      "targetAudience": {
+        "minAge": 10,
+        "maxAge": 28
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Moderate",
+      "intensity": "Medium",
+      "motionType": "Room-scale",
+      "matchType": "Quick Match",
+      "roundsPerGame": 1,
+      "winCondition": "Exploration Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, and color-coded system panels with alternate icons are supported; seated play is partially supported, although some repair tasks work better standing."
+    },
+    {
+      "id": 7,
+      "title": "Pulse Arena",
+      "shortDesc": "A neon sports arena where teams battle for points in quick-fire matches.",
+      "longDesc": "Jump into a high-energy arena sport designed for competitive play and spectator appeal. Pass, block, and score with motion-based controls across bright futuristic courts. The short match length makes it ideal for repeat bookings.",
+      "image": {
+        "JPG": "A007-pulse-arena.jpg",
+        "AVIF": "A007-pulse-arena.avif",
+        "WEBP": "A007-pulse-arena.webp"
+      },
+      "modes": ["Multiplayer"],
+      "minPlayers": 2,
+      "maxPlayers": 10,
+      "ageRating": "PEGI 3",
+      "difficulty": "Easy",
+      "roomType": "Competitive",
+      "duration": 15,
+      "genre": ["Sports", "Arcade", "Party"],
+      "rating": 4.5,
+      "ratingCount": 274,
+      "assetId": "A007",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "None",
+        "language": "None",
+        "onlineInteraction": "Moderate"
+      },
+      "targetAudience": {
+        "minAge": 8,
+        "maxAge": 22
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Moderate",
+      "intensity": "Medium",
+      "motionType": "Standing",
+      "matchType": "Party",
+      "roundsPerGame": 3,
+      "winCondition": "Highest Score",
+      "accessibilityNotes": "Color-blind team indicators, subtitles, and left-handed controls are supported; seated play is not supported because scoring, blocking, and passing rely on standing movement."
+    },
+    {
+      "id": 8,
+      "title": "Jungle Trek VR",
+      "shortDesc": "A family-friendly expedition through ruins, bridges, and wildlife trails.",
+      "longDesc": "Explore a dense jungle filled with ancient ruins and hidden collectible paths. The experience focuses on guided exploration, light puzzles, and safe adventure moments for younger players. It works well for families wanting something relaxed and immersive.",
+      "image": {
+        "JPG": "A008-jungle-trek-vr.jpg",
+        "AVIF": "A008-jungle-trek-vr.avif",
+        "WEBP": "A008-jungle-trek-vr.webp"
+      },
+      "modes": ["Single Player", "Co-op"],
+      "minPlayers": 1,
+      "maxPlayers": 4,
+      "ageRating": "PEGI 3",
+      "difficulty": "Easy",
+      "roomType": "Family",
+      "duration": 30,
+      "genre": ["Adventure", "Exploration", "Family"],
+      "rating": 4,
+      "ratingCount": 156,
+      "assetId": "A008",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "None",
+        "language": "None",
+        "onlineInteraction": "Mild"
+      },
+      "targetAudience": {
+        "minAge": 6,
+        "maxAge": 14
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Comfortable",
+      "intensity": "Low",
+      "motionType": "Room-scale",
+      "matchType": "Quick Match",
+      "roundsPerGame": 1,
+      "winCondition": "Exploration Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, color-blind friendly trail markers, and seated play are supported; standing is optional for players who want more physical exploration."
+    },
+    {
+      "id": 9,
+      "title": "Stealth Protocol",
+      "shortDesc": "A covert infiltration mission built around timing, cover, and gadgets.",
+      "longDesc": "Sneak through secure facilities, disable cameras, and complete objectives without raising alarms. Players can take different routes and coordinate silent takedowns in co-op mode. The pacing suits older children and teens who enjoy tactical gameplay.",
+      "image": {
+        "JPG": "A009-stealth-protocol.jpg",
+        "AVIF": "A009-stealth-protocol.avif",
+        "WEBP": "A009-stealth-protocol.webp"
+      },
+      "modes": ["Single Player", "Co-op"],
+      "minPlayers": 1,
+      "maxPlayers": 4,
+      "ageRating": "PEGI 12",
+      "difficulty": "Medium",
+      "roomType": "Adventure",
+      "duration": 30,
+      "genre": ["Stealth", "Tactical", "Action"],
+      "rating": 4,
+      "ratingCount": 119,
+      "assetId": "A009",
+      "contentDescriptors": {
+        "violence": "Mild",
+        "fear": "Mild",
+        "language": "None",
+        "onlineInteraction": "Mild"
+      },
+      "targetAudience": {
+        "minAge": 12,
+        "maxAge": 28
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Moderate",
+      "intensity": "Medium",
+      "motionType": "Room-scale",
+      "matchType": "Quick Match",
+      "roundsPerGame": 1,
+      "winCondition": "Exploration Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, and color-blind friendly gadget indicators are supported; seated play is limited because cover, timing, and route movement are core mechanics."
+    },
+    {
+      "id": 10,
+      "title": "Astro Drift",
+      "shortDesc": "A zero-gravity racing challenge through asteroid tunnels and rings.",
+      "longDesc": "Pilot sleek space craft through twisting cosmic courses with boost pads and gravity shifts. The focus is on sharp control, route choice, and quick reaction times. It gives competitive players a fresh racing format beyond standard tracks.",
+      "image": {
+        "JPG": "A010-astro-drift.jpg",
+        "AVIF": "A010-astro-drift.avif",
+        "WEBP": "A010-astro-drift.webp"
+      },
+      "modes": ["Multiplayer"],
+      "minPlayers": 2,
+      "maxPlayers": 8,
+      "ageRating": "PEGI 7",
+      "difficulty": "Hard",
+      "roomType": "Competitive",
+      "duration": 15,
+      "genre": ["Racing", "Sci-Fi", "Arcade"],
+      "rating": 4.5,
+      "ratingCount": 221,
+      "assetId": "A010",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "Mild",
+        "language": "None",
+        "onlineInteraction": "Moderate"
+      },
+      "targetAudience": {
+        "minAge": 10,
+        "maxAge": 24
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Intense",
+      "intensity": "High",
+      "motionType": "Seated",
+      "matchType": "Party",
+      "roundsPerGame": 3,
+      "winCondition": "Highest Score",
+      "accessibilityNotes": "Seated play, subtitles, left-handed controls, and high-contrast course markers are supported; the fast zero-gravity racing can still be uncomfortable for motion-sensitive players."
+    },
+    {
+      "id": 11,
+      "title": "Crystal Cove Quest",
+      "shortDesc": "A colourful underwater adventure for puzzle fans and younger players.",
+      "longDesc": "Dive into a bright ocean world where glowing reefs, friendly sea life, and ancient relics create a relaxed experience. Solve light puzzles, collect hidden treasures, and uncover the secret of the crystal caves. The calm tone makes it suitable for family bookings.",
+      "image": {
+        "JPG": "A011-crystal-cove.jpg",
+        "AVIF": "A011-crystal-cove.avif",
+        "WEBP": "A011-crystal-cove.webp"
+      },
+      "modes": ["Single Player", "Co-op"],
+      "minPlayers": 1,
+      "maxPlayers": 4,
+      "ageRating": "PEGI 3",
+      "difficulty": "Easy",
+      "roomType": "Family",
+      "duration": 30,
+      "genre": ["Adventure", "Puzzle", "Family"],
+      "rating": 4,
+      "ratingCount": 165,
+      "assetId": "A011",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "None",
+        "language": "None",
+        "onlineInteraction": "Mild"
+      },
+      "targetAudience": {
+        "minAge": 6,
+        "maxAge": 13
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Comfortable",
+      "intensity": "Low",
+      "motionType": "Room-scale",
+      "matchType": "Quick Match",
+      "roundsPerGame": 1,
+      "winCondition": "Exploration Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, color-blind friendly puzzle hints, and seated play are supported; movement is slow and suitable for younger family players."
+    },
+    {
+      "id": 12,
+      "title": "Iron Bastion",
+      "shortDesc": "A team defence arena where players hold the line against wave attacks.",
+      "longDesc": "Defend a fortified stronghold from waves of drones and siege machines. Players can manage turrets, repair defences, and launch counterattacks together. The action stays intense while still being easy to understand for new visitors.",
+      "image": {
+        "JPG": "A012-iron-bastion.jpg",
+        "AVIF": "A012-iron-bastion.avif",
+        "WEBP": "A012-iron-bastion.webp"
+      },
+      "modes": ["Co-op", "Multiplayer"],
+      "minPlayers": 2,
+      "maxPlayers": 6,
+      "ageRating": "PEGI 12",
+      "difficulty": "Medium",
+      "roomType": "Competitive",
+      "duration": 30,
+      "genre": ["Action", "Tower Defence", "Co-op"],
+      "rating": 4.5,
+      "ratingCount": 189,
+      "assetId": "A012",
+      "contentDescriptors": {
+        "violence": "Moderate",
+        "fear": "Mild",
+        "language": "None",
+        "onlineInteraction": "Moderate"
+      },
+      "targetAudience": {
+        "minAge": 12,
+        "maxAge": 32
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Moderate",
+      "intensity": "High",
+      "motionType": "Room-scale",
+      "matchType": "Ranked",
+      "roundsPerGame": 3,
+      "winCondition": "Objective Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, and color-blind friendly enemy/defence indicators are supported; seated play is limited because turret repair and defensive positioning use room-scale movement."
+    },
+    {
+      "id": 13,
+      "title": "Forgotten Temple",
+      "shortDesc": "An ancient ruin escape room with rotating statues and hidden chambers.",
+      "longDesc": "Search a sunken temple packed with pressure plates, coded murals, and secret doors. The game rewards observation and communication while building a strong adventure feel. It is designed for small groups and puzzle-focused sessions.",
+      "image": {
+        "JPG": "A013-forgotten-temple.jpg",
+        "AVIF": "A013-forgotten-temple.avif",
+        "WEBP": "A013-forgotten-temple.webp"
+      },
+      "modes": ["Single Player", "Co-op"],
+      "minPlayers": 1,
+      "maxPlayers": 4,
+      "ageRating": "PEGI 7",
+      "difficulty": "Medium",
+      "roomType": "Adventure",
+      "duration": 30,
+      "genre": ["Puzzle", "Escape Room", "Adventure"],
+      "rating": 4,
+      "ratingCount": 132,
+      "assetId": "A013",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "Mild",
+        "language": "None",
+        "onlineInteraction": "Mild"
+      },
+      "targetAudience": {
+        "minAge": 8,
+        "maxAge": 18
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Comfortable",
+      "intensity": "Medium",
+      "motionType": "Room-scale",
+      "matchType": "Quick Match",
+      "roundsPerGame": 1,
+      "winCondition": "Exploration Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, color-blind friendly symbols, and seated play are supported; some hidden-object searching is easier while standing."
+    },
+    {
+      "id": 14,
+      "title": "Last Signal",
+      "shortDesc": "A sci-fi mystery about decoding messages from a lost colony ship.",
+      "longDesc": "Board an abandoned vessel and trace the final transmissions left behind by its crew. Each room reveals more of the story through logs, broken terminals, and environmental clues. The experience balances narrative tension with accessible exploration.",
+      "image": {
+        "JPG": "A014-last-signal.jpg",
+        "AVIF": "A014-last-signal.avif",
+        "WEBP": "A014-last-signal.webp"
+      },
+      "modes": ["Single Player"],
+      "minPlayers": 1,
+      "maxPlayers": 1,
+      "ageRating": "PEGI 12",
+      "difficulty": "Medium",
+      "roomType": "Adventure",
+      "duration": 30,
+      "genre": ["Sci-Fi", "Mystery", "Exploration"],
+      "rating": 4,
+      "ratingCount": 97,
+      "assetId": "A014",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "Mild",
+        "language": "None",
+        "onlineInteraction": "None"
+      },
+      "targetAudience": {
+        "minAge": 12,
+        "maxAge": 30
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Comfortable",
+      "intensity": "Medium",
+      "motionType": "Room-scale",
+      "matchType": "Quick Match",
+      "roundsPerGame": 1,
+      "winCondition": "Exploration Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, color-blind friendly terminal displays, and seated play are supported; the experience is narrative-led with limited physical movement."
+    },
+    {
+      "id": 15,
+      "title": "Phantom Ward",
+      "shortDesc": "A multiplayer ghost hunt where teams track paranormal activity together.",
+      "longDesc": "Enter haunted rooms, identify spirit signatures, and set up equipment before the entity reacts. Team coordination is key as the map becomes more dangerous over time. It is a popular crowd-pleaser for horror fans looking for co-op tension.",
+      "image": {
+        "JPG": "A015-phantom-ward.jpg",
+        "AVIF": "A015-phantom-ward.avif",
+        "WEBP": "A015-phantom-ward.webp"
+      },
+      "modes": ["Co-op", "Multiplayer"],
+      "minPlayers": 2,
+      "maxPlayers": 6,
+      "ageRating": "PEGI 16",
+      "difficulty": "Medium",
+      "roomType": "Horror",
+      "duration": 30,
+      "genre": ["Horror", "Investigation", "Teamwork"],
+      "rating": 4.5,
+      "ratingCount": 307,
+      "assetId": "A015",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "Strong",
+        "language": "None",
+        "onlineInteraction": "Mild"
+      },
+      "targetAudience": {
+        "minAge": 16,
+        "maxAge": 35
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Moderate",
+      "intensity": "High",
+      "motionType": "Room-scale",
+      "matchType": "Quick Match",
+      "roundsPerGame": 1,
+      "winCondition": "Objective Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, and color-blind friendly equipment readings are supported; seated play is partially supported, but ghost tracking works best with standing room-scale movement."
+    },
+    {
+      "id": 16,
+      "title": "Rocket Racers",
+      "shortDesc": "Navigate through asteroids fields, use turbos, and sling around space corners at supersonic speed.",
+      "longDesc": "Blast through asteroid belts and rocket drift around glowing space turns. Hit boosters, dodge debris, and launch off zeroG ramps in fast, chaotic races anyone can jump into.",
+      "image": {
+        "JPG": "A016-rocket-racers.jpg",
+        "AVIF": "A016-rocket-racers.avif",
+        "WEBP": "A016-rocket-racers.webp"
+      },
+      "modes": ["Multiplayer"],
+      "minPlayers": 2,
+      "maxPlayers": 8,
+      "ageRating": "PEGI 3",
+      "difficulty": "Easy",
+      "roomType": "Competitive",
+      "duration": 15,
+      "genre": ["Racing", "Arcade", "Family"],
+      "rating": 4,
+      "ratingCount": 233,
+      "assetId": "A016",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "Mild",
+        "language": "None",
+        "onlineInteraction": "Moderate"
+      },
+      "targetAudience": {
+        "minAge": 8,
+        "maxAge": 18
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Intense",
+      "intensity": "High",
+      "motionType": "Seated",
+      "matchType": "Party",
+      "roundsPerGame": 3,
+      "winCondition": "Highest Score",
+      "accessibilityNotes": "Seated play, subtitles, left-handed controls, and high-contrast track UI are supported; speed and sudden asteroid hazards may still be uncomfortable for some players."
+    },
+    {
+      "id": 17,
+      "title": "Wild West Outpost",
+      "shortDesc": "A team shooter set in a frontier town under siege.",
+      "longDesc": "Defend a dusty frontier outpost from bandits and mechanical raiders. Players can split tasks between sniping, repairing, and objective defence. The setting gives the game a strong theme without feeling overly intense.",
+      "image": {
+        "JPG": "A017-wild-west-outpost.jpg",
+        "AVIF": "A017-wild-west-outpost.avif",
+        "WEBP": "A017-wild-west-outpost.webp"
+      },
+      "modes": ["Co-op", "Multiplayer"],
+      "minPlayers": 2,
+      "maxPlayers": 8,
+      "ageRating": "PEGI 12",
+      "difficulty": "Medium",
+      "roomType": "Competitive",
+      "duration": 30,
+      "genre": ["Shooter", "Action", "Western"],
+      "rating": 4,
+      "ratingCount": 176,
+      "assetId": "A017",
+      "contentDescriptors": {
+        "violence": "Moderate",
+        "fear": "Mild",
+        "language": "None",
+        "onlineInteraction": "Moderate"
+      },
+      "targetAudience": {
+        "minAge": 12,
+        "maxAge": 32
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Moderate",
+      "intensity": "Medium",
+      "motionType": "Room-scale",
+      "matchType": "Quick Match",
+      "roundsPerGame": 3,
+      "winCondition": "Objective Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, and color-blind friendly enemy/team markers are supported; seated play is limited because defending and repairing objectives rely on room-scale movement."
+    },
+    {
+      "id": 18,
+      "title": "Aqua Arena",
+      "shortDesc": "An underwater sports match where teams score in moving marine zones.",
+      "longDesc": "Battle in a deep-sea arena surrounded by coral towers and current tunnels. Players swim, pass, and intercept the ball using gesture-based movement. The unusual setting makes it a memorable centre attraction.",
+      "image": {
+        "JPG": "A018-aqua-arena.jpg",
+        "AVIF": "A018-aqua-arena.avif",
+        "WEBP": "A018-aqua-arena.webp"
+      },
+      "modes": ["Multiplayer"],
+      "minPlayers": 2,
+      "maxPlayers": 10,
+      "ageRating": "PEGI 3",
+      "difficulty": "Easy",
+      "roomType": "Competitive",
+      "duration": 15,
+      "genre": ["Sports", "Arcade", "Underwater"],
+      "rating": 4,
+      "ratingCount": 149,
+      "assetId": "A018",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "None",
+        "language": "None",
+        "onlineInteraction": "Moderate"
+      },
+      "targetAudience": {
+        "minAge": 7,
+        "maxAge": 18
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Moderate",
+      "intensity": "Medium",
+      "motionType": "Standing",
+      "matchType": "Party",
+      "roundsPerGame": 3,
+      "winCondition": "Highest Score",
+      "accessibilityNotes": "Subtitles, left-handed controls, and color-blind friendly team/score indicators are supported; seated play is not recommended because swimming gestures and interceptions rely on standing movement."
+    },
+    {
+      "id": 19,
+      "title": "Arcane Tower",
+      "shortDesc": "A fantasy climb through spell rooms, traps, and magical guardians.",
+      "longDesc": "Ascend a towering fortress built by an ancient wizard order. Each level introduces new obstacles, puzzles, and combat spells to master. The game suits players who want a mix of exploration and action.",
+      "image": {
+        "JPG": "A019-arcane-tower.jpg",
+        "AVIF": "A019-arcane-tower.avif",
+        "WEBP": "A019-arcane-tower.webp"
+      },
+      "modes": ["Single Player", "Co-op"],
+      "minPlayers": 1,
+      "maxPlayers": 4,
+      "ageRating": "PEGI 7",
+      "difficulty": "Medium",
+      "roomType": "Adventure",
+      "duration": 30,
+      "genre": ["Fantasy", "Adventure", "Action"],
+      "rating": 4,
+      "ratingCount": 141,
+      "assetId": "A019",
+      "contentDescriptors": {
+        "violence": "Mild",
+        "fear": "Mild",
+        "language": "None",
+        "onlineInteraction": "Mild"
+      },
+      "targetAudience": {
+        "minAge": 8,
+        "maxAge": 22
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Moderate",
+      "intensity": "Medium",
+      "motionType": "Room-scale",
+      "matchType": "Quick Match",
+      "roundsPerGame": 1,
+      "winCondition": "Exploration Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, and color-blind friendly spell/puzzle indicators are supported; seated play is partially supported, although climbing and spell rooms work best standing."
+    },
+    {
+      "id": 20,
+      "title": "Quantum Runner",
+      "shortDesc": "A reflex-based parkour challenge across shifting futuristic platforms.",
+      "longDesc": "Dash across suspended platforms, wall-run through neon corridors, and dodge environmental hazards in a timed course. The experience is simple to understand but difficult to master. It works well as a short solo challenge attraction.",
+      "image": {
+        "JPG": "A020-quantum-runner.jpg",
+        "AVIF": "A020-quantum-runner.avif",
+        "WEBP": "A020-quantum-runner.webp"
+      },
+      "modes": ["Single Player"],
+      "minPlayers": 1,
+      "maxPlayers": 1,
+      "ageRating": "PEGI 7",
+      "difficulty": "Hard",
+      "roomType": "Adventure",
+      "duration": 15,
+      "genre": ["Parkour", "Sci-Fi", "Action"],
+      "rating": 4,
+      "ratingCount": 88,
+      "assetId": "A020",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "Mild",
+        "language": "None",
+        "onlineInteraction": "None"
+      },
+      "targetAudience": {
+        "minAge": 10,
+        "maxAge": 24
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Intense",
+      "intensity": "High",
+      "motionType": "Standing",
+      "matchType": "Quick Match",
+      "roundsPerGame": 1,
+      "winCondition": "Exploration Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, and high-contrast route markers are supported; seated play is not supported because parkour, dodging, and timed platform movement are the main mechanics."
+    },
+    {
+      "id": 21,
+      "title": "Bone Chapel",
+      "shortDesc": "A dark horror escape where players uncover rituals inside an abandoned chapel.",
+      "longDesc": "Search candlelit corridors for sigils, relics, and clues hidden in a cursed chapel. The tension rises gradually as new threats appear while the team pieces together the ritual. It is aimed at older players who enjoy atmospheric horror.",
+      "image": {
+        "JPG": "A021-bone-chapel.jpg",
+        "AVIF": "A021-bone-chapel.avif",
+        "WEBP": "A021-bone-chapel.webp"
+      },
+      "modes": ["Single Player", "Co-op"],
+      "minPlayers": 1,
+      "maxPlayers": 4,
+      "ageRating": "PEGI 16",
+      "difficulty": "Hard",
+      "roomType": "Horror",
+      "duration": 45,
+      "genre": ["Horror", "Mystery", "Escape Room"],
+      "rating": 4.5,
+      "ratingCount": 354,
+      "assetId": "A021",
+      "contentDescriptors": {
+        "violence": "Mild",
+        "fear": "Strong",
+        "language": "None",
+        "onlineInteraction": "Mild"
+      },
+      "targetAudience": {
+        "minAge": 16,
+        "maxAge": 35
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Moderate",
+      "intensity": "High",
+      "motionType": "Room-scale",
+      "matchType": "Quick Match",
+      "roundsPerGame": 1,
+      "winCondition": "Objective Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, and high-contrast clue highlighting are supported; seated play is limited because the horror escape uses room-scale searching and physical interactions."
+    },
+    {
+      "id": 22,
+      "title": "Sonic Circuit",
+      "shortDesc": "A rhythm racing experience where speed comes from timing and accuracy.",
+      "longDesc": "Race through music-driven tracks that shift with the beat. Hit boosts on time, avoid obstacles, and keep rhythm to maintain top speed. The game is a strong fit for players who want something energetic but not combat-focused.",
+      "image": {
+        "JPG": "A022-sonic-circuit.jpg",
+        "AVIF": "A022-sonic-circuit.avif",
+        "WEBP": "A022-sonic-circuit.webp"
+      },
+      "modes": ["Multiplayer"],
+      "minPlayers": 2,
+      "maxPlayers": 6,
+      "ageRating": "PEGI 3",
+      "difficulty": "Medium",
+      "roomType": "Competitive",
+      "duration": 15,
+      "genre": ["Racing", "Rhythm", "Arcade"],
+      "rating": 4,
+      "ratingCount": 164,
+      "assetId": "A022",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "None",
+        "language": "None",
+        "onlineInteraction": "Moderate"
+      },
+      "targetAudience": {
+        "minAge": 8,
+        "maxAge": 20
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Moderate",
+      "intensity": "Medium",
+      "motionType": "Seated",
+      "matchType": "Party",
+      "roundsPerGame": 3,
+      "winCondition": "Highest Score",
+      "accessibilityNotes": "Seated play, subtitles, left-handed controls, rhythm cues, and color-blind friendly track markers are supported; players sensitive to flashing rhythm visuals may need reduced-effects settings."
+    },
+    {
+      "id": 23,
+      "title": "Cosmic Garden",
+      "shortDesc": "A calm exploration experience set inside a living alien ecosystem.",
+      "longDesc": "Wander through glowing plant worlds, floating pollen fields, and gentle wildlife habitats. Players discover secrets through observation and light interaction rather than pressure. It is designed as a relaxing alternative to the louder centre attractions.",
+      "image": {
+        "JPG": "A023-cosmic-garden.jpg",
+        "AVIF": "A023-cosmic-garden.avif",
+        "WEBP": "A023-cosmic-garden.webp"
+      },
+      "modes": ["Single Player"],
+      "minPlayers": 1,
+      "maxPlayers": 1,
+      "ageRating": "PEGI 3",
+      "difficulty": "Easy",
+      "roomType": "Casual",
+      "duration": 15,
+      "genre": ["Exploration", "Relaxing", "Sci-Fi"],
+      "rating": 3.5,
+      "ratingCount": 72,
+      "assetId": "A023",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "None",
+        "language": "None",
+        "onlineInteraction": "None"
+      },
+      "targetAudience": {
+        "minAge": 6,
+        "maxAge": 16
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Comfortable",
+      "intensity": "Low",
+      "motionType": "Standing",
+      "roundsPerGame": 1,
+      "winCondition": "Exploration Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, color-blind friendly interaction highlights, and seated play are supported; this is a low-pressure exploration experience with gentle movement."
+    },
+    {
+      "id": 24,
+      "title": "Dungeon Heist",
+      "shortDesc": "A co-op treasure raid through traps, vaults, and guarded chambers.",
+      "longDesc": "Break into an ancient dungeon and secure the relic before the vault seals shut. Teams must balance stealth, puzzle solving, and quick reactions to survive the run. The structure makes it easy to replay with different group strategies.",
+      "image": {
+        "JPG": "A024-dungeon-heist.jpg",
+        "AVIF": "A024-dungeon-heist.avif",
+        "WEBP": "A024-dungeon-heist.webp"
+      },
+      "modes": ["Co-op", "Multiplayer"],
+      "minPlayers": 2,
+      "maxPlayers": 5,
+      "ageRating": "PEGI 12",
+      "difficulty": "Medium",
+      "roomType": "Adventure",
+      "duration": 30,
+      "genre": ["Heist", "Puzzle", "Adventure"],
+      "rating": 4.5,
+      "ratingCount": 203,
+      "assetId": "A024",
+      "contentDescriptors": {
+        "violence": "Mild",
+        "fear": "Mild",
+        "language": "None",
+        "onlineInteraction": "Mild"
+      },
+      "targetAudience": {
+        "minAge": 12,
+        "maxAge": 30
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Moderate",
+      "intensity": "Medium",
+      "motionType": "Room-scale",
+      "matchType": "Quick Match",
+      "roundsPerGame": 1,
+      "winCondition": "Objective Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, and color-blind friendly trap/puzzle indicators are supported; seated play is partially supported, but room-scale movement is recommended for stealth and quick reactions."
+    },
+    {
+      "id": 25,
+      "title": "Titan Bridge",
+      "shortDesc": "A cooperative construction challenge where players build across a giant canyon.",
+      "longDesc": "Work as a team to place platforms, manage resources, and stabilise a bridge under time pressure. The experience focuses on communication and coordination instead of combat. It is a strong fit for school visits and mixed-age groups.",
+      "image": {
+        "JPG": "A025-titan-bridge.jpg",
+        "AVIF": "A025-titan-bridge.avif",
+        "WEBP": "A025-titan-bridge.webp"
+      },
+      "modes": ["Co-op"],
+      "minPlayers": 2,
+      "maxPlayers": 6,
+      "ageRating": "PEGI 7",
+      "difficulty": "Medium",
+      "roomType": "Casual",
+      "duration": 30,
+      "genre": ["Teamwork", "Simulation", "Construction"],
+      "rating": 4,
+      "ratingCount": 126,
+      "assetId": "A025",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "Mild",
+        "language": "None",
+        "onlineInteraction": "Mild"
+      },
+      "targetAudience": {
+        "minAge": 9,
+        "maxAge": 18
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Comfortable",
+      "intensity": "Medium",
+      "motionType": "Room-scale",
+      "roundsPerGame": 1,
+      "winCondition": "Exploration Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, and color-blind friendly resource indicators are supported; seated play is partially supported, although building and stabilising platforms works best standing."
+    },
+    {
+      "id": 26,
+      "title": "Rift Riders",
+      "shortDesc": "A multiplayer hover-bike battle through a fractured dimension.",
+      "longDesc": "Speed through unstable terrain, avoid dimensional hazards, and use pickups to outplay rival riders. The courses mix racing with light combat for a more dynamic competitive session. It is designed for players who want fast action and strong replay value.",
+      "image": {
+        "JPG": "A026-rift-riders.jpg",
+        "AVIF": "A026-rift-riders.avif",
+        "WEBP": "A026-rift-riders.webp"
+      },
+      "modes": ["Multiplayer"],
+      "minPlayers": 2,
+      "maxPlayers": 8,
+      "ageRating": "PEGI 12",
+      "difficulty": "Hard",
+      "roomType": "Competitive",
+      "duration": 15,
+      "genre": ["Racing", "Action", "Sci-Fi"],
+      "rating": 4.5,
+      "ratingCount": 238,
+      "assetId": "A026",
+      "contentDescriptors": {
+        "violence": "Mild",
+        "fear": "Mild",
+        "language": "None",
+        "onlineInteraction": "Moderate"
+      },
+      "targetAudience": {
+        "minAge": 12,
+        "maxAge": 28
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Intense",
+      "intensity": "High",
+      "motionType": "Seated",
+      "matchType": "Ranked",
+      "roundsPerGame": 3,
+      "winCondition": "Objective Based",
+      "accessibilityNotes": "Seated play, subtitles, left-handed controls, and high-contrast racing UI are supported; the high-speed hover-bike combat may be uncomfortable for motion-sensitive players."
+    },
+    {
+      "id": 27,
+      "title": "Moonlight Marsh",
+      "shortDesc": "A gentle story adventure through glowing wetlands and hidden paths.",
+      "longDesc": "Follow a small guided journey through a moonlit marsh full of lanterns, frogs, and secret trails. The game uses simple interactions and soft storytelling to create a calm VR session. It is ideal for younger players or anyone wanting a low-pressure experience.",
+      "image": {
+        "JPG": "A027-moonlight-marsh.jpg",
+        "AVIF": "A027-moonlight-marsh.avif",
+        "WEBP": "A027-moonlight-marsh.webp"
+      },
+      "modes": ["Single Player", "Co-op"],
+      "minPlayers": 1,
+      "maxPlayers": 4,
+      "ageRating": "PEGI 3",
+      "difficulty": "Easy",
+      "roomType": "Family",
+      "duration": 15,
+      "genre": ["Adventure", "Story", "Family"],
+      "rating": 4,
+      "ratingCount": 110,
+      "assetId": "A027",
+      "contentDescriptors": {
+        "violence": "None",
+        "fear": "None",
+        "language": "None",
+        "onlineInteraction": "Mild"
+      },
+      "targetAudience": {
+        "minAge": 5,
+        "maxAge": 12
+      },
+      "controls": ["Motion Controllers"],
+      "comfortLevel": "Comfortable",
+      "intensity": "Low",
+      "motionType": "Room-scale",
+      "roundsPerGame": 1,
+      "winCondition": "Exploration Based",
+      "accessibilityNotes": "Subtitles, left-handed controls, color-blind friendly path markers, and seated play are supported; the gentle story pacing makes it suitable for younger players."
+    }
+  ]
+}

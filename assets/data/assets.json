@@ -1,0 +1,760 @@
+{
+  "assets": [
+    {
+      "assetId": "A001",
+      "assetName": "iamrichahasija-7019022",
+      "assetType": "Photo",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/photos/virtual-reality-vr-video-game-7019022/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "iamrichahasija (25040169)",
+        "url": "https://pixabay.com/users/25040169/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "3500 x 1787",
+      "aspectRatio": "3500:1787",
+      "fileName": "iamrichahasija-7019022.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "853 KB",
+      "altText": "virtual reality, vr, video game, simulation, vr simulation",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/g3e37fe368af1e89e7715fe585b075f49630238412a0d01ec3506ee889f9c5f947380010af423f65e15c11a5d1a03917f6c755e4317abaf9052a74540faef7760_1280.jpg",
+      "platformId": 7019022,
+      "localImagePath": "A001-neon-strike.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A002",
+      "assetName": "ThankYouFantasyPictures-7779238",
+      "assetType": "Illustration",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/illustrations/alien-planet-asteroid-landscape-7779238/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "ThankYouFantasyPictures (25472871)",
+        "url": "https://pixabay.com/users/25472871/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "4096 x 2304",
+      "aspectRatio": "16:9",
+      "fileName": "ThankYouFantasyPictures-7779238.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "1.6 MB",
+      "altText": "alien, planet, asteroid, landscape, lifeforms, sci-fi, space, crash site, spaceship, starship, ai generated",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/g7356229297f72a230bce42bd9ab5a4dd2cc63b0915e3872ad24eed4cb710f8a7522d48e25ee8c238f52f8a10d8a51e170282bbeaf26ba33f5e260a1788a00b3f_1280.jpg",
+      "platformId": 7779238,
+      "localImagePath": "A002-echo-rift.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A003",
+      "assetName": "Leif Bergerson-9545744",
+      "assetType": "Photo",
+      "platform": "Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/car-on-road-with-light-streaks-9545744/",
+      "license": {
+        "name": "Pexels License",
+        "url": "https://www.pexels.com/license/"
+      },
+      "author": {
+        "name": "Leif Bergerson",
+        "url": "https://www.pexels.com/@leif-bergerson-99376750"
+      },
+      "originalFormat": "JPEG",
+      "originalResolution": "3000 x 2000",
+      "aspectRatio": "3:2",
+      "fileName": "9545744.jpeg",
+      "fileFormat": "JPG",
+      "fileSize": null,
+      "altText": "A car speeds through bright laser lights at night, creating dynamic light streaks.",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://images.pexels.com/photos/9545744/pexels-photo-9545744.jpeg",
+      "platformId": 9545744,
+      "localImagePath": "A003-velocity-x.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A004",
+      "assetName": "JuliusH-7846679",
+      "assetType": "Illustration",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/illustrations/fortress-castle-fantasy-fairy-tale-7846679/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "JuliusH (3921568)",
+        "url": "https://pixabay.com/users/3921568/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "3100 x 3100",
+      "aspectRatio": "1:1",
+      "fileName": "JuliusH-7846679.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "1.0 MB",
+      "altText": "fortress, castle, fantasy, fairy tale, dark, mysterious, magic, mystical, graveyard, spooky",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/g017f3a95632013a6f28e9a75185a2ce9b0817d955a195570bbf34de54ceb9811dc94906c04f733b0f86ff19fd1af13761bf6c6045d56dbade057dba9d90175b3_1280.jpg",
+      "platformId": 7846679,
+      "localImagePath": "A004-midnight-manor.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A005",
+      "assetName": "Dlee-782001",
+      "assetType": "Photo",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/photos/fantasy-castle-cloud-sky-tower-782001/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "Dlee (271284)",
+        "url": "https://pixabay.com/users/271284/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "6000 x 4800",
+      "aspectRatio": "5:4",
+      "fileName": "Dlee-782001.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "4.5 MB",
+      "altText": "fantasy, castle, cloud, sky, tower, fairy, medieval, magic, fairytale, dream, architecture, mystery, old, ancient, kingdom",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/g4a58d7d141b0097a20b22039d373368595fbdccd874e90094f39b6793b95db92b845f2985e5f5a7257f4b868a73eb9761a4146d4809365d0865764b89f7187ef_1280.jpg",
+      "platformId": 782001,
+      "localImagePath": "A005-skyforge-legends.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A006",
+      "assetName": "Mikhail Nilov-7660829",
+      "assetType": "Photo",
+      "platform": "Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/person-in-spacesuit-7660829/",
+      "license": {
+        "name": "Pexels License",
+        "url": "https://www.pexels.com/license/"
+      },
+      "author": {
+        "name": "Mikhail Nilov",
+        "url": "https://www.pexels.com/@mikhail-nilov"
+      },
+      "originalFormat": "JPEG",
+      "originalResolution": "6000 x 4000",
+      "aspectRatio": "3:2",
+      "fileName": "7660829.jpeg",
+      "fileFormat": "JPG",
+      "fileSize": null,
+      "altText": "A woman in a spacesuit operates a futuristic control panel, bathed in vibrant red and blue lights.",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://images.pexels.com/photos/7660829/pexels-photo-7660829.jpeg",
+      "platformId": 7660829,
+      "localImagePath": "A006-orbital-rescue.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A007",
+      "assetName": "unsplash-cySFWKt56TU",
+      "assetType": "Photo",
+      "platform": "Unsplash",
+      "sourceUrl": "https://unsplash.com/photos/people-sitting-on-stadium-seats-cySFWKt56TU",
+      "license": {
+        "name": "Unsplash License",
+        "url": "https://unsplash.com/license"
+      },
+      "author": {
+        "name": "Klim Musalimov",
+        "url": "https://unsplash.com/@klim11"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "3670 x 5505",
+      "aspectRatio": "2:3",
+      "fileName": "people-sitting-on-stadium-seats-cySFWKt56TU.jpg",
+      "fileFormat": "JPG",
+      "fileSize": null,
+      "altText": "people sitting on stadium seats",
+      "datePublished": "2021-02-16T13:01:07Z",
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://images.unsplash.com/photo-1613479571924-2d2227bc6f2c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5NjA5MzF8MHwxfGFsbHx8fHx8fHx8fDE3ODA3ODMwOTN8&ixlib=rb-4.1.0&q=85",
+      "platformId": "cySFWKt56TU",
+      "localImagePath": "A007-pulse-arena.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A008",
+      "assetName": "unsplash-GSCtoEEqntQ",
+      "assetType": "Photo",
+      "platform": "Unsplash",
+      "sourceUrl": "https://unsplash.com/photos/brown-concrete-ruins-during-daytime-GSCtoEEqntQ",
+      "license": {
+        "name": "Unsplash License",
+        "url": "https://unsplash.com/license"
+      },
+      "author": {
+        "name": "Raph Howald",
+        "url": "https://unsplash.com/@raphhowald"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "5184 x 3456",
+      "aspectRatio": "3:2",
+      "fileName": "brown-concrete-ruins-during-daytime-GSCtoEEqntQ.jpg",
+      "fileFormat": "JPG",
+      "fileSize": null,
+      "altText": "brown concrete ruins during daytime",
+      "datePublished": "2017-12-20T01:34:37Z",
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://images.unsplash.com/photo-1513733582371-0adb4dac50f6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5NjA5MzF8MHwxfGFsbHx8fHx8fHx8fDE3ODA3ODMwOTN8&ixlib=rb-4.1.0&q=85",
+      "platformId": "GSCtoEEqntQ",
+      "localImagePath": "A008-jungle-trek-vr.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A009",
+      "assetName": "unsplash-XWB920TRHG8",
+      "assetType": "Photo",
+      "platform": "Unsplash",
+      "sourceUrl": "https://unsplash.com/photos/a-person-in-a-mask-behind-a-chain-link-fence-XWB920TRHG8",
+      "license": {
+        "name": "Unsplash License",
+        "url": "https://unsplash.com/license"
+      },
+      "author": {
+        "name": "Rendy Novantino",
+        "url": "https://unsplash.com/@novantino"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "5952 x 3968",
+      "aspectRatio": "3:2",
+      "fileName": "a-person-in-a-mask-behind-a-chain-link-fence-XWB920TRHG8.jpg",
+      "fileFormat": "JPG",
+      "fileSize": null,
+      "altText": "A person in a mask behind a chain-link fence.",
+      "datePublished": "2026-01-20T05:39:58Z",
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://images.unsplash.com/photo-1768885510653-b8612c70f21d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5NjA5MzF8MHwxfGFsbHx8fHx8fHx8fDE3ODA3ODMwOTN8&ixlib=rb-4.1.0&q=85",
+      "platformId": "XWB920TRHG8",
+      "localImagePath": "A009-stealth-protocol.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A010",
+      "assetName": "steveganger-8829753",
+      "assetType": "Illustration",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/illustrations/metaverse-technology-meta-virtual-8829753/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "steveganger (44388312)",
+        "url": "https://pixabay.com/users/44388312/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "5376 x 3584",
+      "aspectRatio": "3:2",
+      "fileName": "steveganger-8829753.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "2.4 MB",
+      "altText": "metaverse, technology, meta, virtual, reality, vr, digital, future, game, ai generated",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/g67b2ecb1e84c1224aea5a490715d4cd4a6e57f8b58d1630322e638bf007db7837c9cb1f992f80148da53b89cb5f203848ec6b356d7ada16cf03d7e40f28032a7_1280.jpg",
+      "platformId": 8829753,
+      "localImagePath": "A010-astro-drift.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A011",
+      "assetName": "MeditativeKaleidoscope-8722489",
+      "assetType": "Illustration",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/illustrations/cave-crystal-purple-magic-amethyst-8722489/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "MeditativeKaleidoscope (39757915)",
+        "url": "https://pixabay.com/users/39757915/"
+      },
+      "originalFormat": "PNG",
+      "originalResolution": "8100 x 4540",
+      "aspectRatio": "405:227",
+      "fileName": "MeditativeKaleidoscope-8722489.png",
+      "fileFormat": "JPG",
+      "fileSize": "38.2 MB",
+      "altText": "cave, crystal, purple, magic, amethyst, diamond, mineral, quartz, zen, fantasy, surreal, mystical, ethereal, cosmic, mountains, rocks, cavern, underground, dark, light, tunnel, deep, dream, stone, blue, ai generated",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/g0d3f67b3075654ca3dcdd6f563f76c818c21880d269fd42ac0a9fef473953ffa1cef8e51dab6f2e7de305f1ec6930780d965e33800dec9e587f83a66467a287f_1280.png",
+      "platformId": 8722489,
+      "localImagePath": "A011-crystal-cove.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A012",
+      "assetName": "PublicDomainPictures-72273",
+      "assetType": "Photo",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/photos/conwy-castle-wales-medieval-72273/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "PublicDomainPictures (14)",
+        "url": "https://pixabay.com/users/14/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "1920 x 1280",
+      "aspectRatio": "3:2",
+      "fileName": "PublicDomainPictures-72273.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "916 KB",
+      "altText": "conwy, castle, wales, medieval, history, ruins, ancient, landmark, stone, historic, fortress, historical, fort, fortification, stronghold, fortified, gray history, gray castle, gray stone",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/ge47be81605391c06d1e55b1d4ae7e705b6b518c039c827a56fad73dceee5007cc3333210071d127ca8456d3c5b354b30_1280.jpg",
+      "platformId": 72273,
+      "localImagePath": "A012-iron-bastion.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A013",
+      "assetName": "Alan_Frijns-7459835",
+      "assetType": "Photo",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/photos/temple-overgrown-old-building-7459835/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "Alan_Frijns (16705522)",
+        "url": "https://pixabay.com/users/16705522/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "4500 x 3000",
+      "aspectRatio": "3:2",
+      "fileName": "Alan_Frijns-7459835.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "4.5 MB",
+      "altText": "temple, overgrown, old, building, foggy, path, ruin, ai generated",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/g5e14db7e6736a2f5fa31dbc8ac5f665bf1bbce32a3988ad439b9cf60940026c7e02cb7eb820339e935f43cb0f2bcfed0bf1da1c8302cc39475c9a3287620827a_1280.jpg",
+      "platformId": 7459835,
+      "localImagePath": "A013-forgotten-temple.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A014",
+      "assetName": "JuliusH-8537970",
+      "assetType": "Illustration",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/illustrations/ai-generated-spaceship-spacecraft-8537970/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "JuliusH (3921568)",
+        "url": "https://pixabay.com/users/3921568/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "3090 x 2114",
+      "aspectRatio": "1545:1057",
+      "fileName": "JuliusH-8537970.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "1.4 MB",
+      "altText": "ai generated, spaceship, spacecraft, science fiction, space station, old, defect, rusty, futuristic, abandoned, war, destroyed, broken, lost places",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/gb1513fdb5f29f6072370011c0c98e262ff9d07404dc0ffc55f898413d8d76437fe029f89023f226fa8453b6f8ba12dbc0b231676e4af102156e59ab40255c66a_1280.jpg",
+      "platformId": 8537970,
+      "localImagePath": "A014-last-signal.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A015",
+      "assetName": "Fidan Nazim qizi-12266872",
+      "assetType": "Photo",
+      "platform": "Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/bare-tree-near-brown-wooden-house-12266872/",
+      "license": {
+        "name": "Pexels License",
+        "url": "https://www.pexels.com/license/"
+      },
+      "author": {
+        "name": "Fidan Nazim qizi",
+        "url": "https://www.pexels.com/@fidan-nazim-qizi-134456769"
+      },
+      "originalFormat": "JPEG",
+      "originalResolution": "3464 x 2309",
+      "aspectRatio": "3464:2309",
+      "fileName": "12266872.jpeg",
+      "fileFormat": "JPG",
+      "fileSize": null,
+      "altText": "Shadowy forest cabin surrounded by dense fog, evoking mystery.",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://images.pexels.com/photos/12266872/pexels-photo-12266872.jpeg",
+      "platformId": 12266872,
+      "localImagePath": "A015-phantom-ward.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A016",
+      "assetName": "Stevebidmead-441708",
+      "assetType": "Illustration",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/illustrations/spacecraft-space-planet-spaceship-441708/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "Stevebidmead (249424)",
+        "url": "https://pixabay.com/users/249424/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "4000 x 3000",
+      "aspectRatio": "4:3",
+      "fileName": "Stevebidmead-441708.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "1.1 MB",
+      "altText": "spacecraft, space, planet, spaceship, rocket, space rocket, galaxy, outer space, universe, astronomy, science fiction, sci-fi, imagination, fantasy",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/ga5ab71c5060a4a05aa6dd80111af2dec80f79ed3abdbeb3a7123e712413c7a5f8b1fab6e48b44392cfb5ca0733ae925e88f06667fb96133563cbe6484b95e26b_1280.jpg",
+      "platformId": 441708,
+      "localImagePath": "A016-rocket-racers.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A017",
+      "assetName": "Radoslaw Sikorski-31897278",
+      "assetType": "Photo",
+      "platform": "Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/majestic-castle-surrounded-by-forest-and-water-31897278/",
+      "license": {
+        "name": "Pexels License",
+        "url": "https://www.pexels.com/license/"
+      },
+      "author": {
+        "name": "Radoslaw Sikorski",
+        "url": "https://www.pexels.com/@radoslaw-sikorski-36097686"
+      },
+      "originalFormat": "JPEG",
+      "originalResolution": "8064 x 4536",
+      "aspectRatio": "16:9",
+      "fileName": "31897278.jpeg",
+      "fileFormat": "JPG",
+      "fileSize": null,
+      "altText": "Aerial view of a grand castle nestled in lush green forest and bordering a calm body of water.",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://images.pexels.com/photos/31897278/pexels-photo-31897278.jpeg",
+      "platformId": 31897278,
+      "localImagePath": "A017-wild-west-outpost.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A018",
+      "assetName": "TheDigitalArtist-8055453",
+      "assetType": "Illustration",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/illustrations/ai-generated-virtual-reality-8055453/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "TheDigitalArtist (202249)",
+        "url": "https://pixabay.com/users/202249/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "3120 x 2336",
+      "aspectRatio": "195:146",
+      "fileName": "TheDigitalArtist-8055453.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "1.1 MB",
+      "altText": "ai generated, virtual reality, mountains, vr goggles, vr screen, vr, metaverse, technology",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/gf169595304ab3810431cf541b9a25b91413913eb06da906f108ac1369a4602e3fc126bf226dd6a69a9352f32cf48641325f190841c257400313206937543d63d_1280.jpg",
+      "platformId": 8055453,
+      "localImagePath": "A018-aqua-arena.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A019",
+      "assetName": "GrayWayNorth-9452413",
+      "assetType": "Illustration",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/illustrations/ai-generated-castle-gothic-vintage-9452413/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "GrayWayNorth (49031181)",
+        "url": "https://pixabay.com/users/49031181/"
+      },
+      "originalFormat": "PNG",
+      "originalResolution": "3000 x 3000",
+      "aspectRatio": "1:1",
+      "fileName": "GrayWayNorth-9452413.png",
+      "fileFormat": "JPG",
+      "fileSize": "7.3 MB",
+      "altText": "ai generated, castle, gothic, vintage, game, fantasy, dungeon, story, twilight, magic, mysterious, dark, mystical, daemon",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/g12be1220b7afdb4e4ac2e61b4f184a899ebfcc564b41c813c739ae5a2e7f235086dde407cb0cdb32f8ecf37eb8ee32ea19a9dbbac647079b176e7a177a87d56a_1280.png",
+      "platformId": 9452413,
+      "localImagePath": "A019-arcane-tower.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A020",
+      "assetName": "TheDigitalArtist-8299635",
+      "assetType": "Illustration",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/illustrations/ai-generated-technology-future-8299635/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "TheDigitalArtist (202249)",
+        "url": "https://pixabay.com/users/202249/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "3360 x 2807",
+      "aspectRatio": "480:401",
+      "fileName": "TheDigitalArtist-8299635.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "2.4 MB",
+      "altText": "ai generated, technology, future, digital, data, futuristic, electrons, particles, physics, science, quantum",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/gfa1bdbc06b0506cedfedb4137541c3e9e47e2ca8e9934bacf83a441dc608d8b940bfcb789e79e930f6c4c3cf5365ecb60a2a2bd10cd1efcf1ad8481c12e04b25_1280.jpg",
+      "platformId": 8299635,
+      "localImagePath": "A020-quantum-runners.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A021",
+      "assetName": "AberrantRealities-8813871",
+      "assetType": "Illustration",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/illustrations/ai-generated-chapel-medieval-8813871/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "AberrantRealities (38952538)",
+        "url": "https://pixabay.com/users/38952538/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "6720 x 4480",
+      "aspectRatio": "3:2",
+      "fileName": "AberrantRealities-8813871.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "5.5 MB",
+      "altText": "ai generated, chapel, medieval, religion, christianity, indoors, spirituality, architecture, dark, catholicism, altar, old, candle, gothic style, spooky, history, famous place, cultures, night, cross, praying, ancient, god, mystery, cryptic",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/g59cde2c4c4bda6d6c5f5f9e87dae5480a647416c318ce049ffb66bdb36c9dcb3202bcd80b360f74581292af172d1092c9cc9ef28f7d1a4e77ff3bd2e3293a285_1280.jpg",
+      "platformId": 8813871,
+      "localImagePath": "A021-bone-chapel.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A022",
+      "assetName": "AMRULQAYS-8510076",
+      "assetType": "Illustration",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/illustrations/race-car-speed-action-competition-8510076/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "AMRULQAYS (38834479)",
+        "url": "https://pixabay.com/users/38834479/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "8736 x 4896",
+      "aspectRatio": "91:51",
+      "fileName": "AMRULQAYS-8510076.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "5.9 MB",
+      "altText": "race, car, speed, action, competition, vehicle, fast, automobile, auto, formula, racing, wheel, tyre, stadium, circuit, grand prix, motorsport, track, sports, ferrari, prix, formula one, ai generated",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/ge7aa0da67e0c45b821e8656b41dfbfa8d19001c8f8233f4c31d850f244f8410c48e3dec0e23c38a3440ea1925839f45f5c12687b504e91ccc8a84920cfa3220b_1280.jpg",
+      "platformId": 8510076,
+      "localImagePath": "A022-sonic-circuit.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A023",
+      "assetName": "Thesoundofcalmness-9307948",
+      "assetType": "Photo",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/photos/alien-planet-exploration-9307948/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "Thesoundofcalmness (43536937)",
+        "url": "https://pixabay.com/users/43536937/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "5000 x 5000",
+      "aspectRatio": "1:1",
+      "fileName": "Thesoundofcalmness-9307948.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "2.0 MB",
+      "altText": "alien planet, exploration, otherworldly beauty, alien world, cosmic scenery, interstellar beauty, surreal alien terrain, alien vista, extraterrestrial aesthetics, mysterious, beauty beyond earth, discovery, galactic landscape, sci-fi, fantasy",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/g31ba4d83c368418efb19516588bd02e625246db0f33430e542d311822bc2157e105a7d624237fafc2ba0ff69732f2eda87bab7309004450837095ba7f86ed355_1280.jpg",
+      "platformId": 9307948,
+      "localImagePath": "A023-cosmic-garden.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A024",
+      "assetName": "RohmBernhard-2787899",
+      "assetType": "Photo",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/photos/dungeon-castle-fortress-ruin-2787899/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "RohmBernhard (6545802)",
+        "url": "https://pixabay.com/users/6545802/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "5568 x 3712",
+      "aspectRatio": "3:2",
+      "fileName": "RohmBernhard-2787899.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "5.2 MB",
+      "altText": "dungeon, castle, fortress, ruin, middle ages, old castle",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/gf0e07c7b3d18dd175c22424d4da9f9355db8d0a1fe7250ad2980b3db2969012d0ea001c9a801f6584453f9912bf148699a239fc7fcd54a0d873cbdfb77ff98f5_1280.jpg",
+      "platformId": 2787899,
+      "localImagePath": "A024-dungeon-heist.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A025",
+      "assetName": "Hans-4020",
+      "assetType": "Photo",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/photos/glen-canyon-bridge-glen-canyon-4020/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "Hans (2)",
+        "url": "https://pixabay.com/users/2/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "3264 x 2448",
+      "aspectRatio": "4:3",
+      "fileName": "Hans-4020.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "1.7 MB",
+      "altText": "glen canyon bridge, glen canyon, us highway 89, colorado river, page, arizona, usa, bridge, steel construction",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/g642a2b4f67841ecdb5725f8438df1286244e05bbe69f9542163e4a4e45f329a938e21f0ef26cbec99e6a1d00fb96c5db_1280.jpg",
+      "platformId": 4020,
+      "localImagePath": "A025-titan-bridge.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A026",
+      "assetName": "TheDigitalArtist-3253708",
+      "assetType": "Photo",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/photos/motorcycle-racer-racing-race-speed-3253708/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "TheDigitalArtist (202249)",
+        "url": "https://pixabay.com/users/202249/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "3520 x 2338",
+      "aspectRatio": "1760:1169",
+      "fileName": "TheDigitalArtist-3253708.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "2.0 MB",
+      "altText": "motorcycle racer, racing, race, speed, bike",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/g72ec0648304d8678628b34e7dea6ca422106376f76b8962d6dc436c7f03ca16d120b34847e9543916aaecd8ffd85032a346ded46b0bb0ee73418aee7e324f92e_1280.jpg",
+      "platformId": 3253708,
+      "localImagePath": "A026-rift-riders.jpg",
+      "notes": null
+    },
+    {
+      "assetId": "A027",
+      "assetName": "Luminas_Art-8162449",
+      "assetType": "Photo",
+      "platform": "Pixabay",
+      "sourceUrl": "https://pixabay.com/photos/waterfall-night-sky-jungle-summer-8162449/",
+      "license": {
+        "name": "Pixabay License",
+        "url": "https://pixabay.com/service/license-summary/"
+      },
+      "author": {
+        "name": "Luminas_Art (4128746)",
+        "url": "https://pixabay.com/users/4128746/"
+      },
+      "originalFormat": "JPG",
+      "originalResolution": "4128 x 2467",
+      "aspectRatio": "4128:2467",
+      "fileName": "Luminas_Art-8162449.jpg",
+      "fileFormat": "JPG",
+      "fileSize": "2.0 MB",
+      "altText": "waterfall, night sky, jungle, summer, summer night, mystical, avatar, enchanted forest, fairytale forest, magical, magic, nature, fantasy, background",
+      "datePublished": null,
+      "dateAccessed": "2026-06-06",
+      "directImageUrl": "https://pixabay.com/get/g8ba43ef7358ca25fa4c4028adba72dc06f45d0943739bd0e5797cda72656b25b3c646087c3ce547a5f86ed21997c68f74462b7ec78be06110f8fa2332358f4bd_1280.jpg",
+      "platformId": 8162449,
+      "localImagePath": "A027-moonlight-marsh.jpg",
+      "notes": null
+    }
+  ]
+}

@@ -1,0 +1,1363 @@
+/*FIXME: --surface doesnt change in dark mode for some reason, investigate and fix*/
+
+/******************* Root Variables **************************/
+:root {
+  color-scheme: light;
+  --bg: #f7f5f1;
+  --bg-alt: #efebe4;
+  --surface: #ffffff;
+  --surface-strong: #f3efe9;
+  --text: #16141d;
+  --muted: #675f73;
+  --line: rgba(22, 20, 29, 0.14);
+  --shadow: 0 18px 50px rgba(22, 20, 29, 0.09);
+  --brand: #6f25f6;
+  --brand-strong: #4e14cf;
+  --brand-soft: rgba(111, 37, 246, 0.12);
+  --accent: #ef6c38;
+  --accent-soft: rgba(239, 108, 56, 0.12);
+  --success: #1d8f67;
+  --warning: #c77700;
+  --radius-sm: 0.8rem;
+  --radius-md: 1.15rem;
+  --radius-lg: 1.6rem;
+  --container: 1180px;
+  --gutter: clamp(1rem, 3vw, 2rem);
+  --section-gap: clamp(2rem, 5vw, 4rem);
+  --font-display: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  --font-body: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--text);
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(111, 37, 246, 0.08),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(239, 108, 56, 0.08),
+      transparent 24%
+    ),
+    linear-gradient(180deg, #fff 0%, var(--bg) 46%, var(--bg-alt) 100%);
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/****************************************************************
+                        Theme Modes
+****************************************************************/
+
+[data-mode="neon"] {
+  color-scheme: dark;
+  --bg: #0a0d14;
+  --bg-alt: #0d1017;
+  --surface: #1b2130;
+  --surface-strong: #232a3d;
+  --text: #f3f5ff;
+  --muted: #aab2d5;
+  --line: rgba(111, 37, 246, 0.25);
+  --brand: #6f25f6;
+  --brand-strong: #8a4dff;
+  --accent: #ff7a33;
+  --accent-soft: rgba(255, 122, 51, 0.15);
+  --warning: #ffb020;
+  --shadow: 0 20px 60px rgba(111, 37, 246, 0.25);
+  --bg-gradient:
+    radial-gradient(
+      circle at top left,
+      rgba(111, 37, 246, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(255, 122, 51, 0.12),
+      transparent 40%
+    ),
+    linear-gradient(180deg, #0a0d14 0%, #0d1017 100%);
+}
+
+[data-mode="light"] {
+  color-scheme: light;
+  --bg: #f7f7fa;
+  --bg-alt: #eceef5;
+  --surface: #ffffff;
+  --surface-strong: #f3f6ff;
+  --text: #161a28;
+  --muted: #4e5470;
+  --line: rgba(24, 32, 60, 0.14);
+  --brand: #6f25f6;
+  --brand-strong: #4e14cf;
+  --accent: #ef6c38;
+  --accent-soft: rgba(239, 108, 56, 0.12);
+  --warning: #b87400;
+  --shadow: 0 18px 50px rgba(22, 20, 29, 0.08);
+  --bg-gradient: linear-gradient(180deg, #f7f7fa 0%, #eceef5 100%);
+}
+
+[data-mode="dark"] {
+  color-scheme: dark;
+  --bg: #11131d;
+  --bg-alt: #0d1017;
+  --surface: #171b27;
+  --surface-strong: #1e2434;
+  --text: #f3f5ff;
+  --muted: #b8c0df;
+  --line: rgba(243, 245, 255, 0.12);
+  --brand: #6f25f6;
+  --brand-strong: #8a4dff;
+  --accent: #ff7a33;
+  --accent-soft: rgba(255, 122, 51, 0.12);
+  --warning: #ffb020;
+  --shadow: 0 24px 55px rgba(0, 0, 0, 0.35);
+  --bg-gradient:
+    radial-gradient(
+      circle at top left,
+      rgba(111, 37, 246, 0.14),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(255, 122, 51, 0.1),
+      transparent 30%
+    ),
+    linear-gradient(180deg, #11131d 0%, #0d1017 100%);
+}
+
+[data-mode="dark"] body,
+[data-mode="neon"] body {
+  background: var(--bg-gradient);
+}
+
+[data-mode="high-contrast"] {
+  color-scheme: light;
+  --bg: #ffffff;
+  --bg-alt: #ffffff;
+  --surface: #ffffff;
+  --surface-strong: #f2f2f2;
+  --text: #000000;
+  --muted: #1a1a1a;
+  --line: #000000;
+  --brand: #000000;
+  --brand-strong: #000000;
+  --accent: #000000;
+  --accent-soft: rgba(0, 0, 0, 0.08);
+  --warning: #000000;
+  --shadow: none;
+  --bg-gradient: none;
+}
+
+.g-theme {
+  --brand: #6f25f6;
+  --brand-strong: #5318d4;
+  --accent: #ff7a33;
+}
+
+/************************************************
+             Global Styles
+************************************************/
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--muted);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+main,
+footer,
+header > nav {
+  width: min(100%, var(--container));
+  margin-inline: auto;
+}
+
+main {
+  padding: 1rem var(--gutter) 3rem;
+}
+
+/***************** Accessibility and Utility Classes *****************/
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3.5rem;
+  z-index: 20;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.visually-hidden,
+.hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 3px;
+}
+
+.icon {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(16px);
+  background: var(--surface-strong);
+  border-bottom: 1px solid rgba(22, 20, 29, 0.08);
+}
+
+/****************** navbar *****************/
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem var(--gutter);
+}
+
+#navbar .brand,
+#navbar .brand-placeholder {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 2.75rem;
+}
+
+#navbar .brand-mark,
+#navbar .brand-placeholder {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, #fff, #f6f1ff);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  border-radius: 999px;
+}
+
+#navbar .brand-placeholder {
+  background: #fff;
+}
+
+#navbar .brand-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+#navbar ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 2vw, 1.1rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+#navbar .navlink a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0.25rem 0.1rem;
+  font-weight: 700;
+  color: var(--muted);
+  border-bottom: 2px solid transparent;
+}
+
+#navbar .navlink a[aria-current="page"] {
+  color: var(--text);
+  border-bottom-color: var(--brand);
+}
+
+/****************** Profile Icon *****************/
+#profile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+#profile a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+}
+
+footer {
+  padding: 0 1.25rem 2rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+main > section,
+main > article,
+main > aside {
+  margin-top: var(--section-gap);
+}
+
+/***************** Typography and Content Styles *****************/
+.section-title,
+#hero-title,
+.page-title,
+#library-title,
+#game-selection-title,
+#pricing-page h2,
+#about-page h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+}
+
+.section-title {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+.panel,
+.surface,
+.game-card,
+.price-card,
+#library-filters,
+#selected-game-preview,
+#booking-steps,
+#hero-content,
+#hero-media,
+#pricing-cards,
+#booking-layout,
+#library-controls,
+#featured-games,
+#testimonials blockquote,
+.content-card {
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+/********************************************************************
+                        Home Page Section
+*********************************************************************/
+#hero-sect {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: stretch;
+}
+
+#hero-media {
+  overflow: hidden;
+  min-height: 22rem;
+  background: linear-gradient(
+    135deg,
+    rgba(111, 37, 246, 0.12),
+    rgba(239, 108, 56, 0.1)
+  );
+}
+
+#hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  background: linear-gradient(180deg, #fff, #faf7ff);
+}
+
+#hero-title {
+  font-size: clamp(2rem, 4.5vw, 4rem);
+  max-width: 11ch;
+}
+
+#hero-desc,
+#selected-game-preview p,
+#about-page p,
+.price-card li,
+#testimonials p,
+#library-controls,
+#library-filters,
+#game-selection small,
+#pricing-page p {
+  color: var(--muted);
+}
+
+#hero-btn,
+.button,
+#selected-game-preview button,
+.price-card a,
+#library-pagination button,
+#booking-steps li span,
+#game-library-page select,
+#game-library-page input[type="search"] {
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+#hero-btn,
+#selected-game-preview button,
+.price-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.8rem 1.35rem;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 0.8rem 1.8rem rgba(111, 37, 246, 0.25);
+}
+
+#hero-btn:hover,
+#selected-game-preview button:hover,
+.price-card a:hover {
+  background: var(--brand-strong);
+  color: #fff;
+}
+
+/***************** Featured Games *****************/
+
+#featured-games {
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+#featured-games .section-link {
+  margin: 0;
+  margin-left: auto;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+#featured-games > .section-title,
+#featured-games > .section-link,
+#testimonials > .section-title {
+  margin-bottom: 1rem;
+}
+
+#game-cards {
+  display: grid;
+  grid-template-columns: auto repeat(4, minmax(12rem, 1fr)) auto;
+  gap: 1rem;
+  align-items: center;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.arrow {
+  width: 3rem;
+  height: 3rem;
+  background: var(--surface-strong);
+  color: var(--text);
+  border: 1px solid var(--line);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/***************** Game Cards *****************/
+.game-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+  background: linear-gradient(180deg, #fff 0%, #fbf8ff 100%);
+}
+
+.game-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #ece8ff;
+}
+
+.game-card h3,
+.price-card h2,
+#selected-game-preview h3,
+#game-selection h2,
+#booking-steps li,
+#testimonials footer {
+  margin: 0;
+  font-family: var(--font-display);
+}
+
+.game-card h3,
+.price-card h2,
+#selected-game-preview h3 {
+  font-size: 1.1rem;
+}
+
+.game-card p,
+.price-card p,
+#selected-game-preview p,
+#selected-game-preview ul,
+#testimonials footer {
+  margin: 0;
+}
+
+.game-card > :not(img) {
+  padding-inline: 1rem;
+}
+
+.game-card > :last-child {
+  padding-bottom: 1rem;
+}
+
+.game-card p:last-child {
+  letter-spacing: 0.1em;
+  color: var(--warning);
+}
+
+/**************** Testimonials *****************/
+#testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+#testimonials > .section-title {
+  grid-column: 1 / -1;
+}
+
+#testimonials blockquote,
+.price-card,
+#library-filters,
+#selected-game-preview {
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+#testimonials blockquote {
+  display: grid;
+  gap: 0.75rem;
+}
+
+#testimonials footer {
+  color: var(--brand);
+}
+
+/********************************************************************
+                         Game Library Page
+*********************************************************************/
+#game-library-page {
+  display: grid;
+  grid-template-columns: 18rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+#library-filters {
+  position: sticky;
+  top: 5.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+#library-filters h2,
+#library-filters h3 {
+  margin: 0;
+  font-family: var(--font-display);
+}
+
+#library-filters section {
+  display: grid;
+  gap: 0.55rem;
+}
+
+#library-filters label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--text);
+}
+
+#library-filters button,
+#library-pagination button,
+#library-pagination a,
+#booking-game-form input[type="radio"] {
+  min-height: 2.75rem;
+}
+
+#library-filters button,
+#library-pagination button,
+#library-pagination a {
+  padding: 0.6rem 0.9rem;
+  background: var(--surface-strong);
+  color: var(--text);
+  border: 1px solid var(--line);
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+#library-filters button {
+  background: var(--brand);
+  color: #fff;
+  border-color: transparent;
+}
+
+#library-content {
+  display: grid;
+  gap: 1rem;
+}
+
+#library-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem;
+}
+
+#library-controls input,
+#library-controls select {
+  min-height: 2.85rem;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+#library-controls input {
+  flex: 1 1 16rem;
+}
+
+#library-sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: var(--surface-strong) !important;
+  border: 1px solid var(--line);
+}
+
+#library-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+#library-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+#library-pagination button[aria-current="page"] {
+  background: var(--brand);
+  color: #fff;
+  border-color: transparent;
+}
+
+#library-search {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: var(--surface-strong) !important;
+  border: 1px solid var(--line);
+}
+
+/********************************************************************
+                        Game Preview Modal
+*********************************************************************/
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+}
+
+.modal-content {
+  position: relative;
+  width: min(600px, 92vw);
+  max-height: 85vh;
+  overflow-y: auto;
+
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+
+  padding: 1.25rem;
+  z-index: 1;
+
+  animation: modalPop 0.18s ease-out;
+}
+
+@keyframes modalPop {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-content h2 {
+  font-family: var(--font-display);
+  margin-top: 0.75rem;
+}
+
+.modal-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+}
+
+.modal-meta {
+  display: grid;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.modal-meta li {
+  list-style: none;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 0.85rem;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--brand);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.75rem;
+}
+
+.primary-btn:hover {
+  background: var(--brand-strong);
+}
+
+#modal-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.8rem;
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.game-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+  cursor: pointer;
+}
+
+.game-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--brand);
+  box-shadow: 0 12px 30px rgba(111, 37, 246, 0.25);
+}
+
+.game-card:active {
+  transform: scale(0.98);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+/********************************************************************
+                    Game Details Page
+*********************************************************************/
+
+#game-detail {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+#game-detail h1 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+#game-detail h3 {
+  font-family: var(--font-display);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid var(--brand);
+  padding-left: 0.6rem;
+}
+
+.detail-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+}
+
+/* Paragraph styling */
+#game-detail p {
+  margin: 0.25rem 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Sections feel like cards */
+#game-detail section,
+#game-detail div.block {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+/* Back button */
+#back-button {
+  position: sticky;
+  top: 1rem;
+  z-index: 10;
+
+  margin: 1rem;
+  padding: 0.6rem 1rem;
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+
+  background: var(--surface);
+  color: var(--text);
+
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+#back-button:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand);
+  box-shadow: 0 10px 25px rgba(111, 37, 246, 0.15);
+}
+
+/* Metadata grid (if you use lists or groups) */
+#game-detail ul {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+#game-detail li {
+  list-style: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+}
+
+/* Highlight important values */
+#game-detail strong {
+  color: var(--brand);
+}
+
+@media (min-width: 900px) {
+  #game-detail {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: start;
+  }
+
+  .detail-image {
+    grid-column: 1 / -1;
+  }
+}
+
+/********************************************************************
+                            Booking Pages
+*********************************************************************/
+
+#bookings-page {
+  display: grid;
+  gap: 1.15rem;
+}
+
+#booking-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 0;
+  padding: 1rem;
+  list-style: none;
+}
+
+#booking-steps li {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+#booking-steps li[aria-current="step"] {
+  color: var(--text);
+}
+
+#booking-steps li span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+}
+
+#booking-steps li[aria-current="step"] span {
+  background: var(--brand);
+  color: #fff;
+  border-color: transparent;
+}
+
+#booking-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#booking-game-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.selectable-game {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.2rem 0.9rem;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  background: var(--bg-gradient);
+  cursor: pointer;
+}
+
+.selectable-game input {
+  margin: 0;
+  accent-color: var(--brand);
+}
+
+.selectable-game span {
+  font-weight: 800;
+}
+
+.selectable-game small {
+  grid-column: 2;
+}
+
+.selectable-game:has(input:checked) {
+  border-color: rgba(111, 37, 246, 0.35);
+  box-shadow: 0 0 0 4px rgba(111, 37, 246, 0.08);
+}
+
+#selected-game-preview {
+  display: grid;
+  gap: 0.85rem;
+  align-content: start;
+  background: var(--bg-gradient);
+}
+
+#selected-game-preview img {
+  width: 100%;
+  aspect-ratio: 14 / 10;
+  object-fit: cover;
+  background: #eee9ff;
+}
+
+#selected-game-preview ul,
+.price-card ul {
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+/********************************************************************
+                        Pricing Page and Plans
+*********************************************************************/
+
+#pricing-page {
+  display: grid;
+  gap: 1rem;
+}
+
+#pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.price-card {
+  display: grid;
+  gap: 0.9rem;
+  align-content: start;
+}
+
+.price-card strong {
+  font-size: 2rem;
+  color: var(--text);
+}
+
+.price-card.popular-plan {
+  border-color: rgba(111, 37, 246, 0.45);
+  box-shadow: 0 1.5rem 3rem rgba(111, 37, 246, 0.16);
+  transform: translateY(-0.35rem);
+}
+
+.price-card.popular-plan > p:first-of-type {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.35rem 0.85rem;
+  margin: -1rem -1rem 0.25rem;
+  background: var(--brand);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+#pop-tag {
+  color: var(--surface-strong) !important;
+}
+
+/********************************************************************
+                        About Page
+*********************************************************************/
+
+#about-page {
+  display: grid;
+  gap: 1rem;
+}
+
+#about-page section {
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.booking-step-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.booking-form-card,
+.booking-summary-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  padding: 1.2rem;
+}
+
+.booking-form-card form,
+.booking-summary-card dl {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.booking-form-card label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 700;
+}
+
+.booking-form-card input,
+.booking-form-card select {
+  min-height: 2.8rem;
+  border: 1px solid var(--line);
+  padding: 0.5rem 0.75rem;
+}
+
+.step-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.step-actions a,
+.step-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.9rem;
+  border: 1px solid transparent;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.step-actions .action-primary {
+  background: var(--brand);
+  color: #fff;
+}
+
+.step-actions .action-secondary {
+  background: var(--surface-strong);
+  border-color: var(--line);
+  color: var(--text);
+}
+
+.booking-summary-card dl {
+  grid-template-columns: max-content 1fr;
+  column-gap: 1rem;
+}
+
+.booking-summary-card dt {
+  font-weight: 800;
+}
+
+.booking-summary-card dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+/********************************************************************
+                        Account Page and Settings
+*********************************************************************/
+
+#account-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.account-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.account-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 1rem;
+}
+
+.account-panel h2 {
+  font-family: var(--font-display);
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--text);
+}
+
+.account-orders {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.account-orders li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface-strong);
+
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.account-orders li:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand);
+}
+
+.theme-options {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.theme-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.account-orders {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+#theme-form input[type="radio"] {
+  margin: 0;
+  accent-color: var(--brand);
+}
+
+/***************** Responsive Styles *****************/
+
+/* if screen width is less than or equal to 1024px*/
+@media (max-width: 1024px) {
+  #hero-sect,
+  #booking-layout,
+  #game-library-page,
+  #pricing-cards {
+    grid-template-columns: 1fr;
+  }
+
+  #library-filters {
+    position: static;
+  }
+
+  #testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .account-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* if screen width is less than or equal to 760px [Tablet and Mobile] */
+@media (max-width: 760px) {
+  #navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #navbar ul {
+    justify-content: center;
+  }
+
+  #hero-title {
+    max-width: none;
+    font-size: clamp(1.8rem, 10vw, 2.8rem);
+  }
+
+  #library-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #booking-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #game-cards {
+    grid-template-columns: auto repeat(4, minmax(15rem, 1fr)) auto;
+  }
+}
+
+/* Accessibility: Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
