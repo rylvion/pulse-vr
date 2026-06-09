@@ -2,11 +2,11 @@ const THEME_STORAGE_KEY = "pulse-theme-mode";
 const SUPPORTED_MODES = new Set(["neon", "dark", "light", "high-contrast"]);
 
 /**
- * Normalizes the theme mode value.
- * @param {string} value - The theme mode value to normalize.
- * @returns {string} The normalized theme mode.
+ * Normalises the theme mode value.
+ * @param {string} value The theme mode value to normalise.
+ * @returns {string} The normalised theme mode.
  */
-function normalizeThemeMode(value) {
+function normaliseThemeMode(value) {
   const mode = String(value || "")
     .trim()
     .toLowerCase();
@@ -19,7 +19,7 @@ function normalizeThemeMode(value) {
  */
 export function getStoredThemeMode() {
   try {
-    return normalizeThemeMode(localStorage.getItem(THEME_STORAGE_KEY));
+    return normaliseThemeMode(localStorage.getItem(THEME_STORAGE_KEY));
   } catch {
     return "neon";
   }
@@ -27,19 +27,19 @@ export function getStoredThemeMode() {
 
 /**
  * Applies the specified theme mode to the document.
- * @param {string} mode - The theme mode to apply.
- * @returns {string} The normalized theme mode.
+ * @param {string} mode The theme mode to apply.
+ * @returns {string} The normalised theme mode.
  */
 export function applyThemeMode(mode) {
-  const normalised = normalizeThemeMode(mode);
+  const normalised = normaliseThemeMode(mode);
   document.documentElement.dataset.mode = normalised;
   return normalised;
 }
 
 /**
  * Sets the theme mode and stores it in localStorage.
- * @param {string} mode - The theme mode to set.
- * @returns {string} The normalized theme mode.
+ * @param {string} mode The theme mode to set.
+ * @returns {string} The normalised theme mode.
  */
 export function setStoredThemeMode(mode) {
   const normalised = applyThemeMode(mode);

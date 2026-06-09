@@ -158,9 +158,8 @@ function wireCardClicks(games) {
 }
 
 /**
- * Renders the pagination controls based on the total number of games after filtering. It calculates the total number of pages, generates page buttons, and enables/disables navigation buttons as needed.
- * @param {number} totalGames - The total number of games after applying filters, used to determine the number of pages and the state of pagination controls.
-
+ * Renders the pagination controls based on the total number of games after filtering.
+ * @param {number} totalGames The total number of games after applying filters, used to determine the number of pages and the state of pagination controls.
  */
 function renderPagination(totalGames) {
   const pagination = document.getElementById("library-pagination");
@@ -190,7 +189,7 @@ function renderPagination(totalGames) {
 }
 
 /**
- * Synchronizes the state of pagination buttons by enabling or disabling them based on the current page. It iterates through all page buttons and updates their disabled state to reflect whether they correspond to the current page.
+ * Synchronises the state of pagination buttons by enabling or disabling them based on the current page.
  */
 function syncPageButtons() {
   const pagination = document.getElementById("library-pagination");
@@ -205,8 +204,7 @@ function syncPageButtons() {
 }
 
 /**
- * Updates the game library display by filtering and sorting the games based on the current state, rendering the appropriate game cards for the current page, and updating the pagination controls to reflect the total number of filtered games. It ensures that the current page is valid after filtering and that all UI elements are synchronized with the current state.
- *
+ * Updates the game library display by filtering and sorting the games based on the current state
  */
 function updateLibrary() {
   const filteredGames = getFilteredGames();
@@ -226,7 +224,7 @@ function updateLibrary() {
 }
 
 /**
- * Wires up event listeners for the search input, sort select, filter checkboxes, and pagination controls. It updates the state and refreshes the library display whenever the user interacts with any of these controls, ensuring that the displayed games always reflect the current search term, selected genres, selected difficulties, and sort mode.
+ * Wires up event listeners for the search input, sort select, filter checkboxes, and pagination controls.
  */
 function wireControls() {
   const searchInput = document.getElementById("library-search");
@@ -312,7 +310,7 @@ function wireControls() {
 }
 
 /**
- * Procedural function to initialize the game library page by loading the games database, attaching image paths to the game objects, wiring up event listeners for user interactions, and rendering the initial library display. It ensures that all necessary data is loaded and that the UI is responsive to user input from the moment the page is ready.
+ * Procedural function to initialise the game library page by loading the games database
  */
 async function initGameLibrary() {
   const grid = document.getElementById("library-grid");

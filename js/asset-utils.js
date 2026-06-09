@@ -1,12 +1,12 @@
-// asset-utils.js - Utility functions for handling game asset IDs and file names.
+// asset-utils.js Utility functions for handling game asset IDs and file names.
 const A_CODE = 65;
 const ZERO_CODE = 48;
 const NINE_CODE = 57;
 
 /**
  * Checks if the given code represents a digit between '0' and '9' (inclusive) in UTF-16.
- * @param {number} code - The UTF-16 code unit to check.
- * @returns {boolean} - true if the code is a digit, false otherwise.
+ * @param {number} code The UTF-16 code unit to check.
+ * @returns {boolean} true if the code is a digit, false otherwise.
  */
 function isDigitCode(code) {
   return code >= ZERO_CODE && code <= NINE_CODE;
@@ -14,8 +14,8 @@ function isDigitCode(code) {
 
 /**
  * Checks if the given string represents a valid asset ID. (e.g. "A013")
- * @param {string} value - the string to check.
- * @returns {boolean} - true if the string is a valid asset ID, false otherwise.
+ * @param {string} value the string to check.
+ * @returns {boolean} true if the string is a valid asset ID, false otherwise.
  */
 function isAssetIdString(value) {
   // Accepts strings like "A013"
@@ -31,8 +31,8 @@ function isAssetIdString(value) {
 
 /**
  * Checks if the given string starts with a valid asset file prefix. (e.g. "A013-")
- * @param {string} value - the string to check.
- * @returns {boolean} - true if the string starts with a valid asset file prefix, false otherwise.
+ * @param {string} value the string to check.
+ * @returns {boolean} true if the string starts with a valid asset file prefix, false otherwise.
  */
 function isAssetFilePrefix(value) {
   return (
@@ -47,11 +47,11 @@ function isAssetFilePrefix(value) {
 }
 
 /**
- * Normalizes a game ID to a valid numeric ID. Accepts numbers or strings that can be converted to numbers.
- * @param {number|string|null|undefined} value - the value to normalize.
- * @returns {number|null} - the normalized game ID as a number, or null if the input is invalid.
+ * Normalises a game ID to a valid numeric ID. Accepts numbers or strings that can be converted to numbers.
+ * @param {number|string|null|undefined} value the value to normalise.
+ * @returns {number|null} the normalised game ID as a number, or null if the input is invalid.
  */
-export function normalizeGameId(value) {
+export function normaliseGameId(value) {
   if (typeof value === "number") {
     if (Number.isFinite(value) && value >= 1) return value;
     return null;
@@ -67,19 +67,19 @@ export function normalizeGameId(value) {
 
 /**
  * Converts a numeric game ID to an asset ID string. For example, 13 becomes "A013".
- * @param {number} id - the numeric game ID to convert.
- * @returns {string} - the corresponding asset ID string.
+ * @param {number} id the numeric game ID to convert.
+ * @returns {string} the corresponding asset ID string.
  */
 export function toAssetIdFromNumericId(id) {
   return `A${String(id).padStart(3, "0")}`;
 }
 
 /**
- * Normalizes a value to a valid asset ID string. Accepts strings that are already valid asset IDs or can be converted to uppercase valid asset IDs.
- * @param {string} value - the value to normalize.
- * @returns {string|null} - the normalized asset ID string, or null if the input is invalid.
+ * Normalises a value to a valid asset ID string. Accepts strings that are already valid asset IDs or can be converted to uppercase valid asset IDs.
+ * @param {string} value the value to normalise.
+ * @returns {string|null} the normalised asset ID string, or null if the input is invalid.
  */
-export function normalizeAssetId(value) {
+export function normaliseAssetId(value) {
   if (isAssetIdString(value)) return value;
   if (typeof value !== "string") return null;
 
@@ -89,14 +89,14 @@ export function normalizeAssetId(value) {
 
 /**
  * Extracts an asset ID from a game-like object.
- * @param {Object} gameLike - the game-like object to extract the asset ID from.
- * @returns {string|null} - the extracted asset ID string, or null if not found.
+ * @param {Object} gameLike the game-like object to extract the asset ID from.
+ * @returns {string|null} the extracted asset ID string, or null if not found.
  */
 export function assetIdFromGameLike(gameLike) {
-  const direct = normalizeAssetId(gameLike?.assetId);
+  const direct = normaliseAssetId(gameLike?.assetId);
   if (direct) return direct;
 
-  const gameId = normalizeGameId(gameLike?.id);
+  const gameId = normaliseGameId(gameLike?.id);
   if (gameId === null) return null;
 
   return toAssetIdFromNumericId(gameId);
@@ -104,8 +104,8 @@ export function assetIdFromGameLike(gameLike) {
 
 /**
  * Extracts a file name from a file path.
- * @param {string} value - the file path to extract the name from.
- * @returns {string|null} - the extracted file name, or null if not found.
+ * @param {string} value the file path to extract the name from.
+ * @returns {string|null} the extracted file name, or null if not found.
  */
 export function fileNameFromPath(value) {
   if (typeof value !== "string") return null;
@@ -117,9 +117,9 @@ export function fileNameFromPath(value) {
 
 /**
  * Combines an asset ID and a file name into a single string with the format "ASSETID-FILENAME". If the file name already starts with the asset ID prefix, it is returned as is.
- * @param {string} assetId - the asset ID to use as a prefix.
- * @param {string} fileName - the file name to combine with the asset ID.
- * @returns {string|null} - the combined string, or null if the input is invalid.
+ * @param {string} assetId the asset ID to use as a prefix.
+ * @param {string} fileName the file name to combine with the asset ID.
+ * @returns {string|null} the combined string, or null if the input is invalid.
  */
 export function withAssetPrefix(assetId, fileName) {
   if (!assetId || typeof fileName !== "string") return null;

@@ -6,7 +6,7 @@ import {
 } from "./theme-mode.js";
 
 /**
- * Initializes the theme controls on the account page.
+ * Initialises the theme controls on the account page.
  * Sets up event listeners for theme selection and applies the active theme.
  */
 function initThemeControls() {

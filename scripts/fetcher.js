@@ -78,7 +78,7 @@ const localImageIndex = buildLocalImageIndex(IMAGES_DIR);
 /**
  * Determines the platform (Pixabay, Pexels, Unsplash) based on the image URL.
  * @param {string} url - The URL of the image.
- * @return {string|null} - The platform name or null if not recognized.
+ * @return {string|null} - The platform name or null if not recognised.
  */
 function getPlatform(url) {
   if (url.includes("pixabay")) return "pixabay";
@@ -152,7 +152,7 @@ function humanFileSize(bytes) {
 
 
 /**
- * Converts a string to title case (first letter capitalized, rest lowercase).
+ * Converts a string to title case (first letter capitalised, rest lowercase).
  * @param {string} value - The string to convert.
  * @returns {string} - The title-cased string.
  */
@@ -229,7 +229,7 @@ async function fetchUnsplash(id) {
 }
 
 /**
- * Builds a structured asset object from the provided metadata fields. This function serves as a central point for creating asset objects with consistent formatting and default values. It takes in various parameters related to the image asset, such as its ID, name, type, platform, source URL, license information, author details, original format and resolution, aspect ratio, file name and format, file size, alt text, publication date, platform-specific ID, and direct image URL. It also looks up the local image path from the localImageIndex using the assetId. The resulting object includes all these fields along with a dateAccessed field set to the current date and a notes field initialized to null.
+ * Builds a structured asset object from the provided metadata fields. This function serves as a central point for creating asset objects with consistent formatting and default values. It takes in various parameters related to the image asset, such as its ID, name, type, platform, source URL, license information, author details, original format and resolution, aspect ratio, file name and format, file size, alt text, publication date, platform-specific ID, and direct image URL. It also looks up the local image path from the localImageIndex using the assetId. The resulting object includes all these fields along with a dateAccessed field set to the current date and a notes field initialised to null.
  * @param {Object} params - An object containing all the metadata fields for the asset.
  * @return {Object} - A structured asset object with the provided metadata and additional fields for local image path and notes.
  * @remarks - This function ensures that all asset objects are created with a consistent structure and includes logic to handle missing or optional fields. It also integrates the local image path based on the assetId, allowing for easy linking between the metadata and the actual image files in the assets/images directory.
@@ -323,7 +323,7 @@ function formatPixabay(data, url, i) {
  * @param {string} url - the original URL of the image on Pexels, used for reference and linking back to the source.
  * @param {number} i - a sequential index used to generate a unique asset ID for the image.
  * @returns {Object|null} - a structured asset object containing metadata about the image, or null if the data is invalid or incomplete.
- * @remarks - The function checks for the presence of a direct image URL in the API response and logs a warning if it is missing. It then builds an asset object with standardized fields such as assetId, assetName, assetType, platform, sourceUrl, license, author, originalFormat, originalResolution, aspectRatio, fileName, fileFormat, fileSize, altText, datePublished, platformId, and directImageUrl. The assetId is generated using the provided index to ensure uniqueness.
+ * @remarks - The function checks for the presence of a direct image URL in the API response and logs a warning if it is missing. It then builds an asset object with standardised fields such as assetId, assetName, assetType, platform, sourceUrl, license, author, originalFormat, originalResolution, aspectRatio, fileName, fileFormat, fileSize, altText, datePublished, platformId, and directImageUrl. The assetId is generated using the provided index to ensure uniqueness.
  */
 function formatPexels(data, url, i) {
   const directImageUrl = data.src?.original;

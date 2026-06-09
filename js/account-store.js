@@ -1,10 +1,10 @@
-// account-store.js - Manages user bookings and favorite games using localStorage
+// account-store.js Manages user bookings and favorite games using localStorage
 const BOOKING_STORAGE_KEY = "pulse-bookings";
 const FAVORITE_STORAGE_KEY = "pulse-favorites";
 
 /**
  * Reads a stored list from localStorage.
- * @param {string} key - The storage key.
+ * @param {string} key The storage key.
  * @returns {Array} The stored list or an empty array.
  */
 function readStoredList(key) {
@@ -21,8 +21,8 @@ function readStoredList(key) {
 
 /**
  * Writes a list to localStorage.
- * @param {string} key - The storage key.
- * @param {Array} value - The list to store.
+ * @param {string} key The storage key.
+ * @param {Array} value The list to store.
  */
 function writeStoredList(key, value) {
   try {
@@ -33,11 +33,11 @@ function writeStoredList(key, value) {
 }
 
 /**
- * Normalizes a game ID to a valid integer.
- * @param {*} value - The value to normalize.
- * @returns {number|null} The normalized game ID or null if invalid.
+ * Normalises a game ID to a valid integer.
+ * @param {*} value The value to normalise.
+ * @returns {number|null} The normalised game ID or null if invalid.
  */
-function normalizeGameId(value) {
+function normaliseGameId(value) {
   const numeric = Number(value);
   return Number.isFinite(numeric) && numeric >= 1 ? Math.floor(numeric) : null;
 }
@@ -48,17 +48,17 @@ function normalizeGameId(value) {
  */
 export function getSavedBookings() {
   return readStoredList(BOOKING_STORAGE_KEY).filter(
-    (entry) => normalizeGameId(entry?.gameId) !== null,
+    (entry) => normaliseGameId(entry?.gameId) !== null,
   );
 }
 
 /**
  * Saves a booking.
- * @param {Object} booking - The booking to save.
+ * @param {Object} booking The booking to save.
  * @returns {Object|null} The saved booking or null if invalid.
  */
 export function saveBooking(booking) {
-  const gameId = normalizeGameId(booking?.gameId);
+  const gameId = normaliseGameId(booking?.gameId);
   if (gameId === null) return null;
 
   const entry = {
@@ -92,29 +92,29 @@ export function saveBooking(booking) {
  */
 export function getFavoriteGameIds() {
   return readStoredList(FAVORITE_STORAGE_KEY)
-    .map(normalizeGameId)
+    .map(normaliseGameId)
     .filter((value) => value !== null);
 }
 
 /**
  * Checks if a game is marked as a favorite.
- * @param {*} gameId - The ID of the game to check.
+ * @param {*} gameId The ID of the game to check.
  * @returns {boolean} True if the game is a favorite, false otherwise.
  */
 export function isFavoriteGame(gameId) {
-  const normalizedGameId = normalizeGameId(gameId);
-  if (normalizedGameId === null) return false;
+  const normalisedGameId = normaliseGameId(gameId);
+  if (normalisedGameId === null) return false;
 
-  return getFavoriteGameIds().includes(normalizedGameId);
+  return getFavoriteGameIds().includes(normalisedGameId);
 }
 
 /**
  * Toggles the favorite status of a game.
- * @param {Object} game - The game to toggle.
+ * @param {Object} game The game to toggle.
  * @returns {boolean} True if the game is now a favorite, false otherwise.
  */
 export function toggleFavoriteGame(game) {
-  const gameId = normalizeGameId(game?.id ?? game?.gameId);
+  const gameId = normaliseGameId(game?.id ?? game?.gameId);
   if (gameId === null) return false;
 
   const favorites = new Set(getFavoriteGameIds());

@@ -4,7 +4,7 @@ import { attachImagePath, resolveAssetMetadata } from "./image-loader.js";
 import { saveBooking } from "./account-store.js";
 
 /**
- * Gets the URL search parameters.
+ * Gets the URL search parameters. (e.g. ?game=1 or id=2&redir=%2Fpulse-vr%2F)
  * @returns {URLSearchParams} The URL search parameters.
  */
 function getParams() {
@@ -13,8 +13,8 @@ function getParams() {
 
 /**
  * Converts a value to an integer.
- * @param {*} value - The value to convert.
- * @param {*} fallback - The fallback value if conversion fails.
+ * @param {string|number} value The value to convert.
+ * @param {number} fallback The fallback value if conversion fails.
  * @returns {number} The converted integer or the fallback value.
  */
 function toInt(value, fallback = 1) {
@@ -24,7 +24,7 @@ function toInt(value, fallback = 1) {
 
 /**
  * Converts a date to a string in the format "YYYY-MM-DD".
- * @param {Date} date - The date to convert.
+ * @param {Date} date The date to convert.
  * @returns {string} The date string.
  */
 function toDateInputValue(date) {
@@ -36,7 +36,7 @@ function toDateInputValue(date) {
 
 /**
  * Generates a query string from an object of key-value pairs.
- * @param {Object} nextValues - The key-value pairs to include in the query string.
+ * @param {Object} nextValues The key-value pairs to include in the query string.
  * @returns {string} The query string.
  */
 function queryString(nextValues = {}) {
@@ -54,9 +54,9 @@ function queryString(nextValues = {}) {
 }
 
 /**
- * Constructs a URL with the given path and query parameters.
- * @param {string} path - The URL path.
- * @param {Object} values - The query parameters.
+ * Constructs a URL with the given path and query parameters. e.g. withQuery("../date-time/", { game: 1, redir: "/pulse-vr/" })
+ * @param {string} path The URL path.
+ * @param {Object} values The query parameters.
  * @returns {string} The constructed URL.
  */
 function withQuery(path, values = {}) {
@@ -79,7 +79,7 @@ function getBookingQueryValues() {
 }
 
 /**
- * Initializes the booking stepper.
+ * Initialises the booking stepper.
  */
 function initStepper() {
   const current = document.body.dataset.bookingStep;
@@ -137,7 +137,7 @@ async function hydrateGamePreview() {
 }
 
 /**
- * Initializes the date and time step.
+ * Initialises the date and time step.
  * Sets up the date input with appropriate min and max values, and validates the input to enable or disable the next step link accordingly.
  * @returns {void}
  */
@@ -212,7 +212,7 @@ function initDateTimeStep() {
 }
 
 /**
- * Initializes the group size step.
+ * Initialises the group size step.
  * Sets up the input field for group size with appropriate min and max values, and validates the input to enable or disable the next step link accordingly.
  * @returns {void}
  */
@@ -264,7 +264,7 @@ function initGroupSizeStep() {
 }
 
 /**
- * Initializes the confirmation step.
+ * Initialises the confirmation step.
  * Retrieves the booking details from the URL search parameters and updates the DOM elements to display the selected date, time, and group size.
  * Also sets up the links for proceeding to payment or viewing the summary with the appropriate query parameters.
  * @returns {void}
@@ -315,10 +315,10 @@ async function initSuccessStep() {
 }
 
 /**
- * Initializes the summary step.
+ * Initialises the summary step.
  * Retrieves the booking details from the URL search parameters and fetches the game data based on the game ID.
  * Updates the DOM elements to display the game title, selected date, time, and group size in the summary section.
- * @returns {Promise<void>} A promise that resolves when the summary step has been initialized.
+ * @returns {Promise<void>} A promise that resolves when the summary step has been initialised.
  */
 async function initSummaryStep() {
   const gameNode = document.getElementById("summary-game");
@@ -337,6 +337,11 @@ async function initSummaryStep() {
     sizeNode.textContent = getParams().get("size") || "Not selected";
 }
 
+/**
+ * Procedural Function: Initialises the booking flow by setting up the stepper, hydrating the game preview, and initialising thet.
+ * The function is executed when the DOM content is fully loaded.
+ * @returns {Promise<void>} A promise that resolves when the booking flow has been initialised.
+ */
 async function initBookingFlow() {
   initStepper();
   await hydrateGamePreview();

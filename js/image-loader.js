@@ -12,6 +12,12 @@ function createImageState(index, catalog) {
   return { index, catalog };
 }
 
+/**
+ * Loads the image state, which includes an index of asset IDs to image file names and a catalog of asset metadata.  
+ * @param {Object} options Options for loading the image state.
+ * @param {boolean} options.forceReload If true, forces the image state to be reloaded from the server, bypassing any cached state.
+ * @returns {Promise<Object>} A promise that resolves to the image state object containing the index and catalog.
+ */
 async function loadImageState({ forceReload = false } = {}) {
   if (!imageStatePromise || forceReload) {
     imageStatePromise = (async () => {
@@ -70,6 +76,11 @@ async function loadImageState({ forceReload = false } = {}) {
   return imageStatePromise;
 }
 
+/**
+ * Resolves the file name of the image associated with a game.
+ * @param {Object} game The game object for which to resolve the image file name.
+ * @returns {Promise<string>} A promise that resolves to the image file name.
+ */
 export async function resolveImageFileName(game) {
   const imageObj = game?.image;
 
@@ -80,6 +91,11 @@ export async function resolveImageFileName(game) {
   return DEFAULT_IMAGE_FILE;
 }
 
+/**
+ * Resolves the path of the image associated with a game.
+ * @param {Object} game The game object for which to resolve the image path.
+ * @returns {Promise<string>} A promise that resolves to the image path.
+ */
 export async function resolveImagePath(game) {
   const fileName = await resolveImageFileName(game);
 
@@ -89,6 +105,13 @@ export async function resolveImagePath(game) {
   return new URL(fileName, IMAGES_BASE_URL).toString();
 }
 
+/**
+ * Attaches an image path to a game object.
+ * @param {Object} game The game object to which to attach the image path.
+ * @param {Object} options Options for attaching the image path.
+ * @param {boolean} options.forceReload If true, forces the image state to be reloaded from the server, bypassing any cached state.
+ * @returns {Promise<Object>} A promise that resolves to the game object with the image path attached.
+ */
 export async function attachImagePath(game, { forceReload = false } = {}) {
   const imagePath = await resolveImagePath(game, { forceReload });
 
@@ -98,6 +121,13 @@ export async function attachImagePath(game, { forceReload = false } = {}) {
   };
 }
 
+/**
+ * Attaches image paths to a list of game objects.
+ * @param {Array} games The list of game objects to which to attach image paths.
+ * @param {Object} options Options for attaching the image paths.
+ * @param {boolean} options.forceReload If true, forces the image state to be reloaded from the server, bypassing any cached state.
+ * @returns {Promise<Array>} A promise that resolves to the list of game objects with the image paths attached.
+ */
 export async function attachImagePaths(games, { forceReload = false } = {}) {
   const results = [];
 
@@ -108,11 +138,24 @@ export async function attachImagePaths(games, { forceReload = false } = {}) {
   return results;
 }
 
+/**
+ * Loads the asset catalog.
+ * @param {Object} options Options for loading the asset catalog.
+ * @param {boolean} options.forceReload If true, forces the asset state to be reloaded from the server, bypassing any cached state.
+ * @returns {Promise<Map>} A promise that resolves to the asset catalog.
+ */
 export async function loadAssetCatalog({ forceReload = false } = {}) {
   const state = await loadImageState({ forceReload });
   return state.catalog;
 }
 
+/**
+ * Resolves the metadata for a game's asset.
+ * @param {Object} game The game object for which to resolve asset metadata.
+ * @param {Object} options Options for resolving asset metadata.
+ * @param {boolean} options.forceReload If true, forces the asset state to be reloaded from the server, bypassing any cached state.
+ * @returns {Promise<Object|null>} A promise that resolves to the asset metadata or null if not found.
+ */
 export async function resolveAssetMetadata(game, { forceReload = false } = {}) {
   const state = await loadImageState({ forceReload });
 

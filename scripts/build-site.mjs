@@ -1,8 +1,8 @@
-// This script builds the static site by copying files from the docs/ directory to dist/, minifying CSS and JS assets and rewriting asset paths in HTML files
+// This script builds the static site by copying files from the docs/ directory to dist/, minifying CSS and JS assets, rewriting asset paths in HTML files AND generating a sitemap.xml file based on the site's structure.
 // It uses CleanCSS for CSS minification, html-minifier-terser for HTML minification, and terser for JavaScript minification.
 //
 // The script is designed to be run with Node.js and assumes a specific project structure where source files are located in the docs/ directory and assets are in separate css/ and js/ directories at the root level.
-// After running this script, the dist/ directory will contain the optimized version of the site ready for deployment.
+// After running this script, the dist/ directory will contain the optimised version of the site ready for deployment.
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -17,10 +17,19 @@ const sourceDocsDir = path.join(rootDir, "docs");
 const distDir = path.join(rootDir, "dist");
 const siteUrl = "https://rylvion.github.io/pulse-vr";
 
+/**
+ * Removes a directory and all its contents.
+ * @param {string} targetDir The directory to remove.
+ */
 function removeDir(targetDir) {
   fs.rmSync(targetDir, { recursive: true, force: true });
 }
 
+/**
+ * Copies a directory and all its contents to a new location.
+ * @param {string} sourceDir The directory to copy from.
+ * @param {string} targetDir The directory to copy to.
+ */
 function copyDir(sourceDir, targetDir) {
   fs.mkdirSync(targetDir, { recursive: true });
 
@@ -36,6 +45,12 @@ function copyDir(sourceDir, targetDir) {
   }
 }
 
+/**
+ * Retrieves all files in a directory that match a given predicate.
+ * @param {string} dir The directory to search.
+ * @param {Function} predicate The function to test each file against.
+ * @returns {string[]} An array of file paths that match the predicate.
+ */
 function getFiles(dir, predicate) {
   const results = [];
 
@@ -55,6 +70,9 @@ function getFiles(dir, predicate) {
   return results;
 }
 
+/**
+ * Generates a sitemap.xml file based on the site's structure.
+ */
 function generateSiteMap() {
   const htmlFiles = getFiles(distDir, (name) => name.endsWith(".html"));
 
@@ -120,6 +138,10 @@ function generateSiteMap() {
   fs.writeFileSync(path.join(distDir, "sitemap.xml"), sitemapContent, "utf8");
 }
 
+/**
+ * Provides options for HTML minification to optimize the output while preserving necessary whitespace and attributes for correct rendering.
+ * @returns {Object} The HTML minification options.
+ */
 function htmlOptions() {
   return {
     collapseWhitespace: true,
@@ -132,12 +154,23 @@ function htmlOptions() {
   };
 }
 
+/**
+ * Rewrites asset paths in the HTML source to point to the correct locations in the distribution directory.
+ * @param {string} htmlSource The HTML source code.
+ * @param {number} depth The depth of the current file in the directory structure.
+ * @param {string} folderName The name of the folder containing the assets.
+ * @returns {string} The HTML source code with rewritten asset paths.
+ */
 function rewriteAssetPaths(htmlSource, depth, folderName) {
   const sourcePrefix = `${"../".repeat(depth + 1)}${folderName}/`;
   const distPrefix = `${depth === 0 ? "./" : "../".repeat(depth)}${folderName}/`;
   return htmlSource.split(sourcePrefix).join(distPrefix);
 }
 
+/**
+ * Builds the site by copying files, minifying assets, and generating the sitemap.
+ * @returns {Promise<void>} A promise that resolves when the build is complete.
+ */
 async function build() {
   removeDir(distDir);
   copyDir(sourceDocsDir, distDir);

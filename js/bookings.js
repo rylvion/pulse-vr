@@ -6,6 +6,10 @@ const state = {
   selectedGameId: null,
 };
 
+/**
+ * Generates the URL for the next step in the booking process based on the currently selected game
+ * @returns {string} The URL for the next step in the booking process, including query parameters for the selected game if applicable.
+ */
 function nextStepUrl() {
   const gameId = Number(state.selectedGameId);
   const params = new URLSearchParams();
@@ -16,6 +20,11 @@ function nextStepUrl() {
   return query ? `./date-time/?${query}` : "./date-time/";
 }
 
+/**
+ * Builds a booking card element for a given game
+ * @param {*} game 
+ * @returns {string} The HTML string for the booking card representing the game
+ */
 function buildBookingCard(game) {
   return `
     <label class="selectable-game" data-game-id="${game.id}">
@@ -26,6 +35,9 @@ function buildBookingCard(game) {
   `;
 }
 
+/**
+ * Renders the list of games as selectable booking cards and sets up the preview for the selected game
+ */
 function renderGameList() {
   const form = document.getElementById("booking-game-form");
   if (!form) return;
@@ -33,6 +45,10 @@ function renderGameList() {
   form.innerHTML = state.games.map(buildBookingCard).join("");
 }
 
+/**
+ * Retrieves the currently selected game based on the selectedGameId in the state.
+ * @return {Object|null} The selected game object or null if no game is selected.
+ */
 function getSelectedGame() {
   return (
     state.games.find((game) => game.id === state.selectedGameId) ||
@@ -41,6 +57,9 @@ function getSelectedGame() {
   );
 }
 
+/**
+ * Renders the preview section for the currently selected game
+ */
 function renderPreview() {
   const selectedGame = getSelectedGame();
   const previewImage = document.querySelector("#selected-game-preview img");
@@ -72,6 +91,9 @@ function renderPreview() {
   nextButton.dataset.nextUrl = nextStepUrl();
 }
 
+/**
+ * event handler for changes in the game selection form
+ */
 function wireSelection() {
   const form = document.getElementById("booking-game-form");
   if (!form) return;
@@ -93,6 +115,9 @@ function wireSelection() {
   });
 }
 
+/**
+ * Initialises the bookings page by loading the games database, attaching image paths, rendering the game list and preview, and setting up event listeners for game selection
+ */
 async function initBookingsPage() {
   const selectionSection = document.getElementById("game-selection");
   if (!selectionSection) return;

@@ -1,7 +1,12 @@
-let activeGame = null;
+let activeGame = null; // Holds the currently active game for the modal
 
+
+/**
+ * Navigates to the game details page for the specified game, passing the game ID and current page as query parameters.
+ * @param {Object} game The game object for which to show details. 
+ */
 export function goToGameDetails(game) {
-  const url = new URL("/pulse-vr/game.html", window.location.origin);
+  const url = new URL("pulse-vr/game.html", window.location.origin);
 
   url.searchParams.set("id", game.id);
   url.searchParams.set("redir", window.location.pathname);
@@ -9,6 +14,10 @@ export function goToGameDetails(game) {
   window.location.href = url.toString();
 }
 
+/**
+ * Opens a modal dialog to preview the details of the specified game, including its image, title, description, and metadata.
+ * @param {Object} game The game object containing the details to display in the modal.
+ */
 export function openGameModal(game) {
   activeGame = game;
 
@@ -71,12 +80,19 @@ export function openGameModal(game) {
   document.addEventListener("keydown", handleEscClose);
 }
 
+/**
+ * Handles the ESC key press event to close the game modal.
+ * @param {KeyboardEvent} e - The keyboard event object.
+ */
 function handleEscClose(e) {
   if (e.key === "Escape") {
     closeGameModal();
   }
 }
 
+/**
+ * Closes the game preview modal by hiding it and clearing its content, and removes the event listener for the ESC key.
+ */
 export function closeGameModal() {
   const modal = document.getElementById("game-preview-modal");
   if (!modal) return;

@@ -1,5 +1,8 @@
 import { openGameModal } from "./game-modal.js";
 
+/**
+ * Initialises the pricing page by ensuring the game preview modal exists and setting up hover effects for price cards.
+ */
 function ensureModalExists() {
   if (document.getElementById("game-preview-modal")) return;
 
@@ -15,6 +18,9 @@ function initPricingPage() {
   setupPriceCardEffects();
 }
 
+/**
+ * Sets up hover effects for the price cards.
+ */
 function setupPriceCardEffects() {
   const cards = document.querySelectorAll(".price-card");
 

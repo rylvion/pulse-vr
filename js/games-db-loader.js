@@ -1,14 +1,17 @@
-import { assetIdFromGameLike, normalizeGameId } from "./asset-utils.js";
+import { assetIdFromGameLike, normaliseGameId } from "./asset-utils.js";
 import { attachImagePath } from "./image-loader.js";
 
 const GAMES_DB_URL = new URL("/pulse-vr/assets/data/games.json", window.location.origin);
-const GAMES_DB_FALLBACK_URL = new URL(
-  "/pulse-vr/assets/data/games.json",
-  window.location.origin,
-);
+const GAMES_DB_FALLBACK_URL = new URL("/pulse-vr/assets/data/games.json",window.location.origin,);
 
 let gamesStatePromise;
 
+
+/**
+ * Builds the games state from the provided payload.
+ * @param {Object} payload The payload containing the games data.
+ * @returns {Promise<Object>} A promise that resolves to the games state object.
+ */
 async function buildGamesState(payload) {
   const source = Array.isArray(payload?.games) ? payload.games : [];
   const games = new Array(source.length);
@@ -18,10 +21,10 @@ async function buildGamesState(payload) {
     const rawGame = source[i];
     const rawId = rawGame?.id;
 
-    const normalizedId =
+    const normalisedId =
       typeof rawId === "number" && Number.isFinite(rawId) && rawId >= 1
         ? rawId
-        : normalizeGameId(rawId);
+        : normaliseGameId(rawId);
 
     const baseGame = {
       ...rawGame,
@@ -31,12 +34,12 @@ async function buildGamesState(payload) {
           : assetIdFromGameLike(rawGame),
     };
 
-    const normalizedGame = await attachImagePath(baseGame);
+    const normalisedGame = await attachImagePath(baseGame);
 
-    games[i] = normalizedGame;
+    games[i] = normalisedGame;
 
-    if (normalizedId !== null) {
-      byId.set(normalizedId, normalizedGame);
+    if (normalisedId !== null) {
+      byId.set(normalisedId, normalisedGame);
     }
   }
 
@@ -46,6 +49,12 @@ async function buildGamesState(payload) {
   };
 }
 
+/**
+ * Loads the games state, which includes a list of game objects and a map of games by ID.
+ * @param {Object} options Options for loading the games state.
+ * @param {boolean} options.forceReload If true, forces the games state to be reloaded from the server, bypassing any cached state.
+ * @returns {Promise<Object>} A promise that resolves to the games state object containing the list and map of games.
+ */
 async function loadGamesState({ forceReload = false } = {}) {
   if (!gamesStatePromise || forceReload) {
     gamesStatePromise = (async () => {
@@ -70,24 +79,43 @@ async function loadGamesState({ forceReload = false } = {}) {
   return gamesStatePromise;
 }
 
+/**
+ * Loads the games database.
+ * @param {Object} options Options for loading the games database.
+ * @param {boolean} options.forceReload If true, forces the games database to be reloaded from the server, bypassing any cached state.
+ * @returns {Promise<Array>} A promise that resolves to the list of game objects.
+ */
 export async function loadGamesDatabase({ forceReload = false } = {}) {
   const state = await loadGamesState({ forceReload });
   return state.games;
 }
 
+/**
+ * Loads a map of games by ID.
+ * @param {Object} options Options for loading the games map.
+ * @param {boolean} options.forceReload If true, forces the games map to be reloaded from the server, bypassing any cached state.
+ * @returns {Promise<Map>} A promise that resolves to a map of game objects indexed by their IDs.
+ */
 export async function loadGamesById({ forceReload = false } = {}) {
   const state = await loadGamesState({ forceReload });
   return state.byId;
 }
 
+/**
+ * Loads a game by its ID.
+ * @param {string|number} id The ID of the game to load.
+ * @param {Object} options Options for loading the game.
+ * @param {boolean} options.forceReload If true, forces the game to be reloaded from the server, bypassing any cached state.
+ * @returns {Promise<Object|null>} A promise that resolves to the game object or null if not found.
+ */
 export async function loadGameById(id, { forceReload = false } = {}) {
-  const normalizedId =
+  const normalisedId =
     typeof id === "number" && Number.isFinite(id) && id >= 1
       ? id
-      : normalizeGameId(id);
+      : normaliseGameId(id);
 
-  if (normalizedId === null) return null;
+  if (normalisedId === null) return null;
 
   const byId = await loadGamesById({ forceReload });
-  return byId.get(normalizedId) || null;
+  return byId.get(normalisedId) || null;
 }
