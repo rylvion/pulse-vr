@@ -1,7 +1,7 @@
 let activeGame = null;
 
 export function goToGameDetails(game) {
-  const url = new URL("pulse-vr/game.html", window.location.origin);
+  const url = new URL("/pulse-vr/game.html", window.location.origin);
 
   url.searchParams.set("id", game.id);
   url.searchParams.set("redir", window.location.pathname);

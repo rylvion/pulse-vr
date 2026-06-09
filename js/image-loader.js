@@ -1,12 +1,9 @@
 import { assetIdFromGameLike, withAssetPrefix } from "./asset-utils.js";
 
-const ASSETS_DB_URL = new URL("pulse-vr/assets/data/assets.json", import.meta.url);
-const ASSETS_DB_FALLBACK_URL = new URL(
-  "pulse-vr/assets/data/assets.json",
-  import.meta.url,
-);
+const ASSETS_DB_URL = new URL("/pulse-vr/assets/data/assets.json", window.location.origin);
+const ASSETS_DB_FALLBACK_URL = new URL("/pulse-vr/assets/data/assets.json", window.location.origin);
 
-const IMAGES_BASE_URL = new URL("pulse-vr/assets/images/", import.meta.url);
+const IMAGES_BASE_URL = new URL("/pulse-vr/assets/images/", window.location.origin);
 const DEFAULT_IMAGE_FILE = "https://placehold.co/320x200";
 
 let imageStatePromise;
