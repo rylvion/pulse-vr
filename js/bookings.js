@@ -77,7 +77,7 @@ function renderPreview() {
 	const title = document.getElementById("selected-game-title");
 	const description = document.querySelector("#selected-game-preview p");
 	const detailsList = document.querySelector("#selected-game-preview ul");
-	const nextButton = document.querySelector("#selected-game-preview button");
+	const nextButton = document.getElementById("next-step-btn");
 
 	if (
 		!selectedGame ||
