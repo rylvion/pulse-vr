@@ -23,10 +23,12 @@ function renderOrderHistory() {
   ordersList.innerHTML = bookings
     .map(
       (b) => `<li>
-          <strong>${b.gameTitle || "Game"}</strong>
-          <span>— ${b.date || ""} at ${b.time || ""} (${b.size || ""} players)
-          </span>
-        </li>`,
+                <a href="${b.bookingId ? `../bookings/summary/?bookingId=${encodeURIComponent(b.bookingId)}` : "#"}">
+                  <strong>${b.gameTitle || "Game"}</strong>
+                  <span class="booking-id">${b.bookingId || "N/A"}</span>
+                  <span>${b.date || ""} at ${b.time || ""} (${b.size || ""} players)</span>
+                </a>
+              </li>`,
     )
     .join("");
 }

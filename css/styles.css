@@ -1554,6 +1554,14 @@ input:focus:invalid {
   border-color: var(--brand);
 }
 
+.account-orders li a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-decoration: none;
+  color: inherit;
+}
+
 .account-orders li strong {
   color: var(--text);
 }
@@ -1575,7 +1583,6 @@ input:focus:invalid {
 .account-orders li.account-state {
   background: transparent;
   border: none;
-  pointer-events: none;
   align-items: center;
   text-align: center;
 }
@@ -1583,7 +1590,6 @@ input:focus:invalid {
 .account-orders li.account-state a {
   color: var(--brand);
   text-decoration: underline;
-  pointer-events: auto;
 }
 
 .theme-options {
@@ -1602,7 +1608,9 @@ input:focus:invalid {
   accent-color: var(--brand);
 }
 
-/***************** Responsive Styles *****************/
+/**********************************************************************
+                        Responsive Design
+**********************************************************************/
 
 /* if screen width is less than or equal to 1024px*/
 @media (max-width: 1024px) {
