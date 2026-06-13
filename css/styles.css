@@ -1,5 +1,3 @@
-/*FIXME: --surface doesnt change in dark mode for some reason, investigate and fix*/
-
 /******************* Root Variables **************************/
 :root {
   color-scheme: light;
@@ -42,16 +40,12 @@ body {
   font-family: var(--font-body);
   color: var(--text);
   background:
-    radial-gradient(
-      circle at top left,
+    radial-gradient(circle at top left,
       rgba(111, 37, 246, 0.08),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at top right,
+      transparent 28%),
+    radial-gradient(circle at top right,
       rgba(239, 108, 56, 0.08),
-      transparent 24%
-    ),
+      transparent 24%),
     linear-gradient(180deg, #fff 0%, var(--bg) 46%, var(--bg-alt) 100%);
   line-height: 1.5;
   text-rendering: optimizeLegibility;
@@ -78,16 +72,12 @@ body {
   --warning: #ffb020;
   --shadow: 0 20px 60px rgba(111, 37, 246, 0.25);
   --bg-gradient:
-    radial-gradient(
-      circle at top left,
+    radial-gradient(circle at top left,
       rgba(111, 37, 246, 0.18),
-      transparent 35%
-    ),
-    radial-gradient(
-      circle at bottom right,
+      transparent 35%),
+    radial-gradient(circle at bottom right,
       rgba(255, 122, 51, 0.12),
-      transparent 40%
-    ),
+      transparent 40%),
     linear-gradient(180deg, #0a0d14 0%, #0d1017 100%);
 }
 
@@ -125,16 +115,12 @@ body {
   --warning: #ffb020;
   --shadow: 0 24px 55px rgba(0, 0, 0, 0.35);
   --bg-gradient:
-    radial-gradient(
-      circle at top left,
+    radial-gradient(circle at top left,
       rgba(111, 37, 246, 0.14),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at top right,
+      transparent 30%),
+    radial-gradient(circle at top right,
       rgba(255, 122, 51, 0.1),
-      transparent 30%
-    ),
+      transparent 30%),
     linear-gradient(180deg, #11131d 0%, #0d1017 100%);
 }
 
@@ -208,7 +194,7 @@ button {
 
 main,
 footer,
-header > nav {
+header>nav {
   width: min(100%, var(--container));
   margin-inline: auto;
 }
@@ -360,9 +346,9 @@ footer {
   text-align: center;
 }
 
-main > section,
-main > article,
-main > aside {
+main>section,
+main>article,
+main>aside {
   margin-top: var(--section-gap);
 }
 
@@ -417,11 +403,9 @@ main > aside {
 #hero-media {
   overflow: hidden;
   min-height: 22rem;
-  background: linear-gradient(
-    135deg,
-    rgba(111, 37, 246, 0.12),
-    rgba(239, 108, 56, 0.1)
-  );
+  background: linear-gradient(135deg,
+      rgba(111, 37, 246, 0.12),
+      rgba(239, 108, 56, 0.1));
 }
 
 #hero-media img {
@@ -503,9 +487,9 @@ main > aside {
   font-weight: 700;
 }
 
-#featured-games > .section-title,
-#featured-games > .section-link,
-#testimonials > .section-title {
+#featured-games>.section-title,
+#featured-games>.section-link,
+#testimonials>.section-title {
   margin-bottom: 1rem;
 }
 
@@ -571,11 +555,11 @@ main > aside {
   margin: 0;
 }
 
-.game-card > :not(img) {
+.game-card> :not(img) {
   padding-inline: 1rem;
 }
 
-.game-card > :last-child {
+.game-card> :last-child {
   padding-bottom: 1rem;
 }
 
@@ -591,7 +575,7 @@ main > aside {
   gap: 1rem;
 }
 
-#testimonials > .section-title {
+#testimonials>.section-title {
   grid-column: 1 / -1;
 }
 
@@ -619,6 +603,10 @@ main > aside {
   grid-template-columns: 18rem minmax(0, 1fr);
   gap: 1rem;
   align-items: start;
+}
+
+#game-library-page>h1 {
+  grid-column: 1 / -1;
 }
 
 #library-filters {
@@ -775,6 +763,7 @@ main > aside {
     transform: scale(0.95);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -1175,7 +1164,7 @@ select:focus:invalid {
   transform: translateY(-0.35rem);
 }
 
-.price-card.popular-plan > p:first-of-type {
+.price-card.popular-plan>p:first-of-type {
   display: inline-flex;
   width: fit-content;
   padding: 0.35rem 0.85rem;
@@ -1202,6 +1191,10 @@ select:focus:invalid {
   padding: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+#about-page>h1 {
+  grid-column: 1 / -1;
 }
 
 #about-page section {
@@ -1571,6 +1564,12 @@ input:focus:invalid {
   transform: none !important;
 }
 
+.account-orders li.account-state {
+  background: transparent;
+  border: none;
+  pointer-events: none;
+}
+
 .theme-options label {
   display: inline-flex;
   align-items: center;
@@ -1586,6 +1585,7 @@ input:focus:invalid {
 
 /* if screen width is less than or equal to 1024px*/
 @media (max-width: 1024px) {
+
   #hero-sect,
   #booking-layout,
   #game-library-page,
@@ -1635,7 +1635,7 @@ input:focus:invalid {
   }
 }
 
-/* accessibility:rReduce motion for users who prefer it */
+/* accessibility: Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
