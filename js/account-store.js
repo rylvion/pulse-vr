@@ -85,7 +85,7 @@ export function saveBooking(booking) {
         current.size === entry.size
       );
     }),
-  ].slice(0, 10);
+  ].slice(0, 3);
 
   writeStoredList(BOOKING_STORAGE_KEY, nextBookings);
 

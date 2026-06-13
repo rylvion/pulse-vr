@@ -1,9 +1,35 @@
-// account.js - Handles theme controls on the account page
+// account.js - Handles theme controls and order history on the account page
 import {
   applyThemeMode,
   getStoredThemeMode,
   setStoredThemeMode,
 } from "./theme-mode.js";
+import { getSavedBookings } from "./account-store.js";
+
+/**
+ * Renders the saved bookings into the order history list.
+ */
+function renderOrderHistory() {
+  const ordersList = document.getElementById("account-orders");
+  if (!ordersList) return;
+
+  const bookings = getSavedBookings();
+
+  if (bookings.length === 0) {
+    ordersList.innerHTML = `<li class="account-state">No bookings found, <a href="../bookings/">Create one now</a></li>`;
+    return;
+  }
+
+  ordersList.innerHTML = bookings
+    .map(
+      (b) => `<li>
+          <strong>${b.gameTitle || "Game"}</strong>
+          <span>— ${b.date || ""} at ${b.time || ""} (${b.size || ""} players)
+          </span>
+        </li>`,
+    )
+    .join("");
+}
 
 /**
  * Initialises the theme controls on the account page.
@@ -35,8 +61,13 @@ function initThemeControls() {
   if (status) status.textContent = `Active theme: ${activeMode}`;
 }
 
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initThemeControls);
-} else {
+function init() {
   initThemeControls();
+  renderOrderHistory();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
+} else {
+  init();
 }
