@@ -48,7 +48,7 @@ function normaliseGameId(value) {
  */
 export function getSavedBookings() {
   return readStoredList(BOOKING_STORAGE_KEY).filter(
-    (entry) => normaliseGameId(entry?.gameId) !== null
+    (entry) => normaliseGameId(entry?.gameId) !== null,
   );
 }
 
@@ -77,14 +77,7 @@ export function saveBooking(booking) {
 
   const nextBookings = [
     entry,
-    ...existing.filter((current) => {
-      return !(
-        current.gameId === entry.gameId &&
-        current.date === entry.date &&
-        current.time === entry.time &&
-        current.size === entry.size
-      );
-    }),
+    ...existing.filter((current) => current.id !== entry.id),
   ].slice(0, 3);
 
   writeStoredList(BOOKING_STORAGE_KEY, nextBookings);
