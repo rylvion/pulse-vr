@@ -3,7 +3,7 @@ const DRAFT_KEY = "bookingDraft";
 
 import { loadGameById } from "./games-db-loader.js";
 import { attachImagePath, resolveAssetMetadata } from "./image-loader.js";
-import { saveBooking } from "./account-store.js";
+import { saveBooking, getSavedBookings } from "./account-store.js";
 
 /**
  * Retrieves the current booking draft from localStorage.
@@ -461,7 +461,7 @@ async function initSummaryStep() {
   let size;
 
   if (bookingId) {
-    const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+    const bookings = getSavedBookings();
     const booking = bookings.find((b) => b.id === bookingId);
 
     if (booking) {

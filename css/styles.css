@@ -1502,6 +1502,7 @@ input:focus:invalid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+  align-items: start;
 }
 
 @media (max-width: 768px) {
@@ -1537,6 +1538,9 @@ input:focus:invalid {
 }
 
 .account-orders li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
   padding: 0.8rem 1rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
@@ -1550,9 +1554,13 @@ input:focus:invalid {
   border-color: var(--brand);
 }
 
-.theme-options {
-  display: grid;
-  gap: 0.55rem;
+.account-orders li strong {
+  color: var(--text);
+}
+
+.account-orders li span {
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .account-state {
@@ -1568,12 +1576,19 @@ input:focus:invalid {
   background: transparent;
   border: none;
   pointer-events: none;
+  align-items: center;
+  text-align: center;
 }
 
 .account-orders li.account-state a {
   color: var(--brand);
   text-decoration: underline;
   pointer-events: auto;
+}
+
+.theme-options {
+  display: grid;
+  gap: 0.55rem;
 }
 
 .theme-options label {
