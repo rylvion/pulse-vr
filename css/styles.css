@@ -1570,6 +1570,12 @@ input:focus:invalid {
   pointer-events: none;
 }
 
+.account-orders li.account-state a {
+  color: var(--brand);
+  text-decoration: underline;
+  pointer-events: auto;
+}
+
 .theme-options label {
   display: inline-flex;
   align-items: center;
