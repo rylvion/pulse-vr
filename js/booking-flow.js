@@ -277,19 +277,30 @@ function initDateTimeStep() {
 
 /**
  * Initialises the group size step.
- * Sets up the input field for group size with appropriate min and max values, and validates the input to enable or disable the next step link accordingly.
- * @returns {void}
+ * Fetches the selected game and sets up the input field with the game's min/max players.
+ * Validates the input and enables or disables the next step link accordingly.
+ * @returns {Promise<void>}
  */
-function initGroupSizeStep() {
+async function initGroupSizeStep() {
   const input = document.getElementById("group-size");
   const nextLink = document.getElementById("next-step-link");
+  const details = document.getElementById("flow-game-details");
 
   if (!input || !nextLink) return;
 
-  const minSize = 2;
-  const maxSize = 8;
-
   const draft = getDraft();
+  const gameId = toInt(draft.game || getParams().get("game"), 1);
+  const game = await loadGameById(gameId);
+
+  const minSize = game?.minPlayers ?? 2;
+  const maxSize = game?.maxPlayers ?? 8;
+
+  if (details && game) {
+    details.textContent =
+      `${game.duration} mins, ` +
+      `${game.difficulty} difficulty, ` +
+      `${minSize}-${maxSize} players`;
+  }
 
   const initialSize = toInt(draft.size || getParams().get("size"), minSize);
 
@@ -301,12 +312,12 @@ function initGroupSizeStep() {
     const value = toInt(input.value, minSize);
 
     if (value < minSize) {
-      input.setCustomValidity("Choose at least 2 players.");
+      input.setCustomValidity(`Choose at least ${minSize} players.`);
       return false;
     }
 
     if (value > maxSize) {
-      input.setCustomValidity("Choose no more than 8 players.");
+      input.setCustomValidity(`Choose no more than ${maxSize} players.`);
       return false;
     }
 
@@ -400,7 +411,7 @@ async function initSuccessStep() {
   const gameId = toInt(draft.game, 1);
   const game = await loadGameById(gameId);
 
-  let bookings = null;
+  let booking = null;
 
   if (game && draft.date && draft.time && draft.size && !draft.saved) {
     booking = {
@@ -500,7 +511,7 @@ async function initBookingFlow() {
     await hydrateGamePreview();
   }
   if (step === "date") initDateTimeStep();
-  if (step === "group") initGroupSizeStep();
+  if (step === "group") await initGroupSizeStep();
   if (step === "confirm") initConfirmStep();
   if (step === "success") initSuccessStep();
   if (step === "summary") initSummaryStep();
