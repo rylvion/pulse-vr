@@ -83,17 +83,17 @@ function generateSiteMap() {
   ]);
 
   const seoConfig = {
-    "": { priority: "1.0", changefreq: "weekly" },
-    "about/": { priority: "0.7", changefreq: "monthly" },
-    "account/": { priority: "0.6", changefreq: "monthly" },
-    "pricing/": { priority: "0.8", changefreq: "monthly" },
-    "game-library/": { priority: "0.8", changefreq: "weekly" },
-    "bookings/": { priority: "0.9", changefreq: "weekly" },
-    "bookings/date-time/": { priority: "0.9", changefreq: "weekly" },
-    "bookings/group-size/": { priority: "0.9", changefreq: "weekly" },
-    "bookings/confirm/": { priority: "0.9", changefreq: "weekly" },
-    "bookings/summary/": { priority: "0.9", changefreq: "weekly" },
-    "bookings/success/": { priority: "0.4", changefreq: "yearly" },
+    "": { priority: 1.0, changefreq: "weekly" },
+    "about/": { priority: 0.7, changefreq: "monthly" },
+    "account/": { priority: 0.6, changefreq: "monthly" },
+    "pricing/": { priority: 0.8, changefreq: "monthly" },
+    "game-library/": { priority: 0.8, changefreq: "weekly" },
+    "bookings/": { priority: 0.9, changefreq: "weekly" },
+    "bookings/date-time/": { priority: 0.9, changefreq: "weekly" },
+    "bookings/group-size/": { priority: 0.9, changefreq: "weekly" },
+    "bookings/confirm/": { priority: 0.9, changefreq: "weekly" },
+    "bookings/summary/": { priority: 0.9, changefreq: "weekly" },
+    "bookings/success/": { priority: 0.4, changefreq: "yearly" },
   };
 
   const urls = htmlFiles
@@ -109,7 +109,7 @@ function generateSiteMap() {
       }
 
       const config = seoConfig[relativePath] || {
-        priority: "0.5",
+        priority: 0.5,
         changefreq: "monthly",
       };
 

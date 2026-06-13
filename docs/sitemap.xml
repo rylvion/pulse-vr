@@ -37,6 +37,13 @@
   </url>
 
   <url>
+    <loc>https://rylvion.github.io/pulse-vr/accessibility/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://rylvion.github.io/pulse-vr/bookings/</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>weekly</changefreq>
