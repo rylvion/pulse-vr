@@ -1653,7 +1653,7 @@ input:focus:invalid {
 }
 
 #accessibility-content ol {
-    counter-reset: item;
+    counter-reset: item var(--counter-start, 0);
     padding-left: 0;
     margin-top: 12px;
 }
@@ -1701,7 +1701,6 @@ input:focus:invalid {
 }
 
 #accessibility-content a[href^="mailto"] {
-    background: var(--accent-soft);
     padding: 2px 6px;
     border-radius: 6px;
 }
