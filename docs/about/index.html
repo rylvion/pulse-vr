@@ -40,28 +40,34 @@
 		<link rel="manifest" href="../assets/favicons/site.webmanifest" />
 
 		<!-- CSS -->
-		<link rel="stylesheet" href="../../css/styles.css" />
+		<link rel="stylesheet" href="../css/styles.css" />
 
 		<!-- JS -->
-		<script src="../../js/theme-init.js" defer></script>
+		<script src="../js/theme-init.js" defer></script>
+
+		<!-- other -->
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	</head>
 
 	<body class="g-theme">
 		<a class="skip-link" href="#about-page">Skip to content</a>
 		<header>
 			<nav id="navbar" aria-label="Primary">
-				<a class="brand" href="../../" aria-label="Pulse VR home">
+				<a class="brand" href="../" aria-label="Pulse VR home">
 					<img
 						class="brand-mark"
 						src="https://placehold.co/88x88/6f25f6/ffffff?text=PV"
 						width="44"
 						height="44"
-						alt="Pulse VR logo placeholder"
+						alt="Pulse VR logo"
 						decoding="async" />
 					<span class="brand-title">Pulse VR</span>
 				</a>
 				<ul>
-					<li class="navlink"><a href="../../">Home</a></li>
+					<li class="navlink"><a href="../">Home</a></li>
 					<li class="navlink"><a href="../game-library/">Game Library</a></li>
 					<li class="navlink"><a href="../bookings/">Bookings</a></li>
 					<li class="navlink"><a href="../pricing/">Pricing</a></li>
@@ -84,8 +90,9 @@
 			</nav>
 		</header>
 		<main id="about-page" class="page-main" tabindex="-1">
+			<h1 id="about-title">About Pulse VR</h1>
 			<section>
-				<h2>About Pulse VR</h2>
+				<h2>Our Story</h2>
 				<p>
 					Pulse VR is a small virtual reality gaming center built around fast
 					sessions, family‑friendly choices, and team experiences. What started
@@ -154,10 +161,79 @@
 					everyone who walks through our doors.
 				</p>
 			</section>
+			<section id="contact-us">
+				<h2>Contact Us</h2>
+				<p>If you have any questions, feel free to reach out to us.</p>
+
+				<ul>
+					<li><i class="fas fa-envelope" aria-hidden="true"></i> Email: <a
+							href="mailto:support@pulsevr.example">support@pulsevr.example</a></li>
+					<li><i class="fas fa-phone" aria-hidden="true"></i> Phone: <a
+							href="tel:+441610000000">+44 161
+							000 0000</a></li>
+					<li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Address: <a
+							href="https://maps.google.com/?q=123+VR+Street,+Manchester+City+Centre,+UK"
+							target="_blank"> 123 VR Street, Manchester City Centre,
+							UK</a></li>
+					<li><i class="fas fa-clock" aria-hidden="true"></i> Hours: Mon-Fri
+						9AM-6PM</li>
+				</ul>
+
+				<p>
+					You can also connect with us on social media for updates and special
+					offers:
+				</p>
+				<ul>
+					<li><a href="https://www.facebook.com/pulsevr"><i
+								class="fab fa-facebook-f" aria-hidden="true"></i> Facebook</a></li>
+					<li><a href="https://www.twitter.com/pulsevr"><i
+								class="fab fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+					<li><a href="https://www.instagram.com/pulsevr"><i
+								class="fab fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+					<li><a href="https://www.linkedin.com/company/pulsevr"><i
+								class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a></li>
+				</ul>
+				<p>
+					We look forward to welcoming you to Pulse VR and providing an
+					unforgettable gaming experience! If you want to submit feedback contact us
+					or complete the form below:
+				</p>
+				<form id="feedback-form" aria-labelledby="feedback-form-title"
+					aria-describedby="feedback-status">
+					<h2 id="feedback-form-title">Submit Feedback</h2>
+					<label for="name"><i class="fas fa-user" aria-hidden="true"></i>
+						Name:</label>
+					<input type="text" id="name" name="name" required
+						autocomplete="name" />
+
+					<label for="email"><i class="fas fa-envelope" aria-hidden="true"></i>
+						Email:</label>
+					<input type="email" id="email" name="email" required
+						autocomplete="email" />
+
+					<label for="subject"><i class="fas fa-tag" aria-hidden="true"></i>
+						Subject:</label>
+					<input type="text" id="subject" name="subject" required
+						autocomplete="off" />
+
+					<label for="message"><i class="fas fa-comment" aria-hidden="true"></i>
+						Message:</label>
+					<textarea id="message" name="message" rows="4" required
+						autocomplete="off"></textarea>
+
+					<button type="submit"><i class="fas fa-paper-plane" aria-hidden="true"></i>
+						Submit
+						Feedback
+					</button>
+				</form>
+				<div id="feedback-status" aria-live="polite"></div>
+				<script type="module" src="../js/feedback.js"></script>
+			</section>
 		</main>
 
 		<footer>
 			<p>&copy; 2026 Pulse VR. All rights reserved.</p>
 		</footer>
+		<script type="module" src="../js/feedback.js"></script>
 	</body>
 </html>

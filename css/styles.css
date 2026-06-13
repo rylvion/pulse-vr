@@ -171,6 +171,15 @@ body {
              Global Styles
 ************************************************/
 
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  line-height: 1.1;
+  margin: 0 0 0.75rem 0;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -886,14 +895,12 @@ main > aside {
   border: 1px solid var(--line);
 }
 
-/* Paragraph styling */
 #game-detail p {
   margin: 0.25rem 0;
   color: var(--text);
   line-height: 1.6;
 }
 
-/* Sections feel like cards */
 #game-detail section,
 #game-detail div.block {
   background: var(--surface);
@@ -903,7 +910,6 @@ main > aside {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
 }
 
-/* Back button */
 #back-button {
   position: sticky;
   top: 1rem;
@@ -930,7 +936,6 @@ main > aside {
   box-shadow: 0 10px 25px rgba(111, 37, 246, 0.15);
 }
 
-/* Metadata grid (if you use lists or groups) */
 #game-detail ul {
   padding: 0;
   margin: 0;
@@ -946,7 +951,6 @@ main > aside {
   border: 1px solid var(--line);
 }
 
-/* Highlight important values */
 #game-detail strong {
   color: var(--brand);
 }
@@ -1018,6 +1022,30 @@ main > aside {
 #booking-game-form {
   display: grid;
   gap: 0.75rem;
+}
+
+.error {
+  display: block;
+  min-height: 1.25rem;
+  margin: 0.35rem 0 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.error:empty {
+  display: none;
+}
+
+input:invalid,
+select:invalid {
+  border-color: var(--accent);
+}
+
+input:focus:invalid,
+select:focus:invalid {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .selectable-game {
@@ -1170,15 +1198,190 @@ main > aside {
 
 #about-page {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #about-page section {
-  padding: 1.25rem;
+  padding: 1.5rem;
   background: var(--surface);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 }
+
+#about-page section:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand);
+}
+
+#about-page h2 {
+  margin-bottom: 1rem;
+  color: var(--text);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  border-bottom: 2px solid var(--accent-soft);
+  padding-bottom: 0.5rem;
+}
+
+#about-page p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+#about-page ul {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+#about-page li {
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+#about-page strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+#contact-us ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+#contact-us li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+}
+
+#contact-us i {
+  color: var(--brand);
+  width: 1.2rem;
+  text-align: center;
+}
+
+#contact-us a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+#contact-us a:hover,
+#contact-us a:focus-visible {
+  color: var(--brand-strong);
+}
+
+#feedback-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+#feedback-form label {
+  color: var(--text);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#feedback-form input,
+#feedback-form textarea {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  color: var(--text);
+  font: inherit;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+#feedback-form input::placeholder,
+#feedback-form textarea::placeholder {
+  color: var(--muted);
+}
+
+#feedback-form input:focus,
+#feedback-form textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+#feedback-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+#feedback-form button {
+  border: none;
+  border-radius: 0.9rem;
+  padding: 1rem 1.4rem;
+  background: linear-gradient(135deg, var(--brand), var(--brand-strong));
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    filter 180ms ease;
+}
+
+#feedback-form button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+#feedback-form button:active {
+  transform: translateY(0);
+}
+
+#feedback-status {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+@media (min-width: 768px) {
+  #about-page {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+
+  #contact-us {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  #about-page {
+    padding: 1rem;
+  }
+
+  #about-page section {
+    padding: 1.25rem;
+  }
+}
+
+/********************************************************************
+                        Booking flow pages
+*********************************************************************/
 
 .booking-step-page {
   display: grid;
@@ -1210,6 +1413,44 @@ main > aside {
   min-height: 2.8rem;
   border: 1px solid var(--line);
   padding: 0.5rem 0.75rem;
+}
+
+.booking-game-media {
+  width: 100%;
+  max-width: 520px;
+  margin: 12px 0 18px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+}
+
+.booking-game-media img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+[data-mode="neon"] .booking-game-media {
+  box-shadow:
+    0 0 0 1px rgba(111, 37, 246, 0.25),
+    0 20px 60px rgba(111, 37, 246, 0.25);
+}
+
+[data-mode="light"] .booking-game-media {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+input:invalid {
+  border: 2px solid #ff4d4d;
+}
+
+input:focus:invalid {
+  outline: 2px solid #ff4d4d;
+  outline-offset: 2px;
 }
 
 .step-actions {
@@ -1270,6 +1511,12 @@ main > aside {
   gap: 1rem;
 }
 
+@media (max-width: 768px) {
+  .account-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .account-panel {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -1291,23 +1538,18 @@ main > aside {
   list-style: none;
   margin: 0;
   padding: 0;
+
   display: grid;
   gap: 0.6rem;
 }
 
 .account-orders li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   padding: 0.8rem 1rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--surface-strong);
 
-  transition:
-    transform 0.15s ease,
-    border-color 0.15s ease;
+  transition: transform 0.15s ease, border-color 0.15s ease;
 }
 
 .account-orders li:hover {
@@ -1320,16 +1562,19 @@ main > aside {
   gap: 0.55rem;
 }
 
+.account-state {
+  text-align: center;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  transform: none !important;
+}
+
 .theme-options label {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-}
-
-.account-orders {
-  margin: 0;
-  padding-left: 1.2rem;
-  color: var(--muted);
 }
 
 #theme-form input[type="radio"] {
@@ -1390,7 +1635,7 @@ main > aside {
   }
 }
 
-/* Accessibility: Reduce motion for users who prefer it */
+/* accessibility:rReduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

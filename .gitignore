@@ -27,4 +27,6 @@ scripts/node_modules/
 *.env
 *.cache
 *.bak
+*.bkp
+*.dtmp
 *~

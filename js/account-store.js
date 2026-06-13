@@ -1,6 +1,6 @@
-// account-store.js Manages user bookings and favorite games using localStorage
+// account-store.js - Manages user bookings using localStorage
+
 const BOOKING_STORAGE_KEY = "pulse-bookings";
-const FAVORITE_STORAGE_KEY = "pulse-favorites";
 
 /**
  * Reads a stored list from localStorage.
@@ -28,13 +28,13 @@ function writeStoredList(key, value) {
   try {
     localStorage.setItem(key, JSON.stringify(value));
   } catch {
-    // Ignore storage failures in private or restricted browsing modes.
+    // Ignore storage failures (private mode / quota issues)
   }
 }
 
 /**
  * Normalises a game ID to a valid integer.
- * @param {*} value The value to normalise.
+ * @param {string|number} value The value to normalise.
  * @returns {number|null} The normalised game ID or null if invalid.
  */
 function normaliseGameId(value) {
@@ -48,12 +48,14 @@ function normaliseGameId(value) {
  */
 export function getSavedBookings() {
   return readStoredList(BOOKING_STORAGE_KEY).filter(
-    (entry) => normaliseGameId(entry?.gameId) !== null,
+    (entry) => normaliseGameId(entry?.gameId) !== null
   );
 }
 
 /**
  * Saves a booking.
+ * Prevents duplicates and keeps latest 10 bookings.
+ *
  * @param {Object} booking The booking to save.
  * @returns {Object|null} The saved booking or null if invalid.
  */
@@ -62,6 +64,7 @@ export function saveBooking(booking) {
   if (gameId === null) return null;
 
   const entry = {
+    id: booking?.id || crypto.randomUUID(),
     gameId,
     gameTitle: String(booking?.gameTitle || ""),
     date: String(booking?.date || ""),
@@ -70,9 +73,11 @@ export function saveBooking(booking) {
     savedAt: new Date().toISOString(),
   };
 
+  const existing = getSavedBookings();
+
   const nextBookings = [
     entry,
-    ...getSavedBookings().filter((current) => {
+    ...existing.filter((current) => {
       return !(
         current.gameId === entry.gameId &&
         current.date === entry.date &&
@@ -83,44 +88,6 @@ export function saveBooking(booking) {
   ].slice(0, 10);
 
   writeStoredList(BOOKING_STORAGE_KEY, nextBookings);
+
   return entry;
-}
-
-/**
- * Retrieves the list of favorite game IDs.
- * @returns {Array} The list of favorite game IDs.
- */
-export function getFavoriteGameIds() {
-  return readStoredList(FAVORITE_STORAGE_KEY)
-    .map(normaliseGameId)
-    .filter((value) => value !== null);
-}
-
-/**
- * Checks if a game is marked as a favorite.
- * @param {*} gameId The ID of the game to check.
- * @returns {boolean} True if the game is a favorite, false otherwise.
- */
-export function isFavoriteGame(gameId) {
-  const normalisedGameId = normaliseGameId(gameId);
-  if (normalisedGameId === null) return false;
-
-  return getFavoriteGameIds().includes(normalisedGameId);
-}
-
-/**
- * Toggles the favorite status of a game.
- * @param {Object} game The game to toggle.
- * @returns {boolean} True if the game is now a favorite, false otherwise.
- */
-export function toggleFavoriteGame(game) {
-  const gameId = normaliseGameId(game?.id ?? game?.gameId);
-  if (gameId === null) return false;
-
-  const favorites = new Set(getFavoriteGameIds());
-  if (favorites.has(gameId)) favorites.delete(gameId);
-  else favorites.add(gameId);
-
-  writeStoredList(FAVORITE_STORAGE_KEY, [...favorites]);
-  return favorites.has(gameId);
 }

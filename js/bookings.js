@@ -11,6 +11,7 @@ const state = {
 
 /**
  * Generates the URL for the next step in the booking process based on the currently selected game
+ * @return {string} The URL for the next step, including query parameters if a game is selected
  */
 function nextStepUrl() {
 	const gameId = Number(state.selectedGameId);
@@ -26,6 +27,8 @@ function nextStepUrl() {
 
 /**
  * Builds a booking card element for a given game
+ * @param {Object} game - The game object containing details to display
+ * @returns {string} The HTML string for the booking card
  */
 function buildBookingCard(game) {
 	return `
@@ -58,6 +61,7 @@ function renderGameList() {
 
 /**
  * Retrieves selected game
+ * @return {Object|null} The selected game object or null if not found
  */
 function getSelectedGame() {
 	return (
@@ -69,6 +73,7 @@ function getSelectedGame() {
 
 /**
  * Renders preview section
+ * @param {Object|null} game - The game object to display in the preview
  */
 function renderPreview() {
 	const selectedGame = getSelectedGame();

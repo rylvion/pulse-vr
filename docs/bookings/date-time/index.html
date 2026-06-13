@@ -57,7 +57,7 @@
 						src="https://placehold.co/88x88/6f25f6/ffffff?text=PV"
 						width="44"
 						height="44"
-						alt="Pulse VR logo placeholder"
+						alt="Pulse VR logo"
 						decoding="async" />
 					<span class="brand-title">Pulse VR</span>
 				</a>
@@ -95,11 +95,19 @@
 			</ol>
 			<section class="booking-form-card" aria-labelledby="date-time-title">
 				<h1 id="date-time-title">Choose Date and Time</h1>
+
+				<div class="booking-game-media">
+					<img id="flow-game-image" alt="Selected game image preview" />
+				</div>
+
 				<p id="flow-game-details">Loading selected game details...</p>
+
 				<form id="date-time-form">
 					<label for="booking-date">Date
-						<input id="booking-date" name="date" type="date" required />
+						<input id="booking-date" name="date" type="date" required
+							aria-describedby="booking-date-error" />
 					</label>
+
 					<label for="booking-time">Time Slot
 						<select id="booking-time" name="time">
 							<option value="10:00">10:00</option>
@@ -109,8 +117,10 @@
 							<option value="18:00">18:00</option>
 						</select>
 					</label>
-					<p class="error" id="time-error"></p>
+
+					<p class="error" id="booking-date-error" aria-live="polite"></p>
 				</form>
+
 				<p class="step-actions">
 					<a class="action-secondary" href="../">Back</a>
 					<a id="next-step-link" class="action-primary" href="../group-size/">Next:
