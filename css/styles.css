@@ -1861,6 +1861,10 @@ input:focus:invalid {
     padding: 0.5rem 0;
   }
 
+  #navbar ul.is-open {
+    display: flex;
+  }
+
   #navbar .navlink a {
     width: 100%;
     padding: 0.6rem 0.5rem;
