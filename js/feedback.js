@@ -12,13 +12,13 @@ if (form) {
 
 		if (!name || !email || !subject || !message) {
 			statusBox.textContent = "Please fill in all fields.";
-			statusBox.style.color = "red";
+			statusBox.style.color = "var(--error, #d32f2f)";
 			return;
 		}
 
 		if (!validateEmail(email)) {
 			statusBox.textContent = "Please enter a valid email address.";
-			statusBox.style.color = "red";
+			statusBox.style.color = "var(--error, #d32f2f)";
 			return;
 		}
 
@@ -29,7 +29,7 @@ if (form) {
 		)}`;
 
 		statusBox.textContent = "Opening your email client...";
-		statusBox.style.color = "green";
+		statusBox.style.color = "var(--success, #1d8f67)";
 
 		setTimeout(() => {
 			window.location.href = mailtoLink;

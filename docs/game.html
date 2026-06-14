@@ -45,6 +45,7 @@
 
 		<!-- JS -->
 		<script src="../js/theme-init.js" defer></script>
+		<script src="../js/nav-toggle.js" defer></script>
 	</head>
 
 	<body class="g-theme">
@@ -61,8 +62,17 @@
 						decoding="async" />
 					<span class="brand-title">Pulse VR</span>
 				</a>
-
-				<ul>
+				<button class="nav-toggle-btn" aria-label="Toggle navigation menu"
+					aria-expanded="false" aria-controls="nav-menu">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round"
+						stroke-linejoin="round" aria-hidden="true">
+						<line x1="3" y1="6" x2="21" y2="6"></line>
+						<line x1="3" y1="12" x2="21" y2="12"></line>
+						<line x1="3" y1="18" x2="21" y2="18"></line>
+					</svg>
+				</button>
+				<ul id="nav-menu">
 					<li class="navlink"><a href="./" aria-current="page">Home</a></li>
 					<li class="navlink"><a href="./game-library/">Game Library</a></li>
 					<li class="navlink"><a href="./bookings/">Bookings</a></li>
