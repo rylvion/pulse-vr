@@ -671,6 +671,55 @@ main > aside {
   color: var(--brand);
 }
 
+/***************** intro section *****************/
+
+#intro {
+  padding: clamp(1rem, 3vw, 2rem);
+  margin-top: 1rem;
+
+  background: var(--surface);
+  border: 1px solid var(--line);
+
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+#intro-title {
+  text-align: center;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+#intro p {
+  color: var(--muted);
+  line-height: 1.7;
+
+  max-width: 65ch;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+}
+
+#intro .intro-main-divider {
+  border: none;
+  height: 2px;
+
+  width: 100%;
+  margin: 1.25rem 0;
+
+  background: var(--brand);
+}
+
+#intro .intro-grid hr {
+  border: none;
+  border-top: 1px solid var(--line);
+
+  max-width: 65ch;
+  width: 100%;
+
+  margin: 1rem auto;
+}
+
 /********************************************************************
                          Game Library Page
 *********************************************************************/
