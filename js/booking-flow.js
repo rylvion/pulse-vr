@@ -26,6 +26,25 @@ function setDraft(update) {
 }
 
 /**
+ * Gets the current game ID from the URL (source of truth) or draft.
+ * If the URL has a game param, updates the draft so it stays current.
+ * @returns {number|null} The game ID or null.
+ */
+function getGameId() {
+  const params = getParams();
+  const urlGame = params.get("game");
+  const draft = getDraft();
+  if (urlGame) {
+    const id = toInt(urlGame, null);
+    if (id !== null && id !== draft.game) {
+      setDraft({ game: id });
+    }
+    return id;
+  }
+  return draft.game ? toInt(draft.game, null) : null;
+}
+
+/**
  * Gets the URL search parameters. (e.g. ?game=1 or id=2&redir=%2Fpulse-vr%2F)
  * @returns {URLSearchParams} The URL search parameters.
  */
@@ -39,7 +58,7 @@ function getParams() {
  * @param {number} fallback The fallback value if conversion fails.
  * @returns {number} The converted integer or the fallback value.
  */
-function toInt(value, fallback = 1) {
+function toInt(value, fallback = null) {
   const parsed = Number(value);
   return Number.isFinite(parsed) && parsed > 0 ? Math.floor(parsed) : fallback;
 }
@@ -122,9 +141,8 @@ function initStepper() {
  * @returns {Promise<void>} A promise that resolves when the game preview has been hydrated.
  */
 async function hydrateGamePreview() {
+  const gameId = getGameId();
   const draft = getDraft();
-
-  const gameId = toInt(draft.game || getParams().get("game"), 1);
 
   const game = await loadGameById(gameId).then((value) =>
     value ? attachImagePath(value) : null,
@@ -244,7 +262,6 @@ function initDateTimeStep() {
     nextLink.dataset.disabled = String(!isValid);
 
     setDraft({
-      ...getDraft(),
       date: dateInput.value,
       time: timeSelect.value,
     });
@@ -286,10 +303,10 @@ async function initGroupSizeStep() {
   const nextLink = document.getElementById("next-step-link");
   const details = document.getElementById("flow-game-details");
 
-  if (!input || !nextLink) return;
+  if (!input || !nextLink) return; 
 
   const draft = getDraft();
-  const gameId = toInt(draft.game || getParams().get("game"), 1);
+  const gameId = getGameId();
   const game = await loadGameById(gameId);
 
   const minSize = game?.minPlayers ?? 2;
@@ -381,7 +398,7 @@ function initConfirmStep() {
   if (sizeNode) sizeNode.textContent = sizeValue;
 
   const previewParams = {
-    game: draft.game || getParams().get("game"),
+    game: getGameId(),
     date: draft.date || getParams().get("date"),
     time: draft.time || getParams().get("time"),
     size: draft.size || getParams().get("size"),
@@ -408,7 +425,7 @@ function initConfirmStep() {
 async function initSuccessStep() {
   const draft = getDraft();
   const summaryLink = document.getElementById("summary-link");
-  const gameId = toInt(draft.game, 1);
+  const gameId = getGameId();
   const game = await loadGameById(gameId);
 
   let booking = null;
@@ -426,7 +443,10 @@ async function initSuccessStep() {
 
     saveBooking(booking);
 
-    setDraft({ ...draft, saved: true, bookingId: booking.id });
+    setDraft({
+      saved: true,
+      bookingId: booking.id
+    });
   }
 
   if (summaryLink) {
@@ -439,7 +459,6 @@ async function initSuccessStep() {
 ///////////////////////////////////////////////////////////////////////////////
 // Booking Step: Summary Page
 ///////////////////////////////////////////////////////////////////////////////
-
 /**
  * Initialises the summary step.
  * Retrieves the booking details from the URL search parameters and fetches the game data based on the game ID.
@@ -475,7 +494,7 @@ async function initSummaryStep() {
   if (!gameId) {
     const draft = getDraft();
 
-    gameId = draft.game || params.get("game");
+    gameId = getGameId();
     date = draft.date || params.get("date");
     time = draft.time || params.get("time");
     size = draft.size || params.get("size");
@@ -496,7 +515,7 @@ async function initSummaryStep() {
 // Booking Flow Initialisation
 ///////////////////////////////////////////////////////////////////////////////
 /**
- * Procedural Function: Initialises the booking flow by setting up the stepper, hydrating the game preview, and initialising thet.
+ * Procedural Function: Initialises the booking flow by setting up the stepper, hydrating the game preview, and initialising the steps.
  * The function is executed when the DOM content is fully loaded.
  * @returns {Promise<void>} A promise that resolves when the booking flow has been initialised.
  */
