@@ -1254,7 +1254,8 @@ select:focus:invalid {
 }
 
 #pop-tag {
-  color: var(--surface-strong) !important;
+  color: var(--text) !important;
+  font-weight: 700 !important;
 }
 
 /********************************************************************
